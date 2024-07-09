@@ -1,0 +1,61 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2024
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+% Aluno: Eric Hoffmann Fernandes Braga
+
+\chapterimage{ScalaH} % Chapter heading image
+\chapter{ Introdu\c{c}\~{a}o}
+
+Rust \'{e} uma linguadem de programa\c{c}\~{a}o de alto n\'{\i}vel multi-paradigma e compilada, Rust nasceu originalmente como projeto pessoal de Graydon Hoare em 2006 enquanto trabalhava na Mozilla Research e come\c{c}ou a ser patrocinada pela mesma em 2009 como parte de um navegador experimental chamado Servo. O sistema de posse e mem\'{o}ria pelo qual Rust \'{e} famosa vem de influ\^{e}ncia das linguagens Cyclone e ML Kit.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Citar algumas bibliotecas de Rust  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{quote}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %  Citar curiosidade de Rust com a casa branca em 2024  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  Em fevereiro de 2024 a Casa Branca e fez um anunciamento p\'{u}blico com t\'{i}tulo \textit{BACK TO THE BUILDING BLOCKS: A Path Toward Secure And Measurable Software} descrevendo em 16 p\'{a}ginas como deveriamos para de usar linguagens "inseguras" em termos de mem\'{o}ria e come\c{c}ar a usar linguagens seguras para nossos \textit{softwares}. No documento a Casa Branca recomenda o uso de linguagens seguras como Rust.
+
+\end{quote}
+
+
+\section{Aspectos hist\'{o}ricos da linguagem Rust}
+
+Rust foi anunciada publicamente em 2010 pela Mozilla e em torno da mesma \'{e}poca mudou-se o foco do compilador original escrito em O-Caml para um compilador auto-hospedado usando LLVM. Em 2011 o compilador escrito em Rust se compilou com sucesso pela primeira vez. Mais tarde no mesmo ano a logo foi decidida inspirada na coroa de uma bicicleta.
+\par
+Em mar\c{c}o de 2012 foi lan\c{c}ada a vers\~{a}o 0.2, nela foram introduzidas classes pela primeira vez. Quatro meses depois destrutores e polimorfismo foram adicionados na vers\~{a}o 0.3 atrav\'{e}s do uso de interfaces. Em outubro de 2012 \textit{traits} foram adicionados como meio de se implementar heran\c{c}a na linguagem, interfaces tamb\'{e}m foram combinadas com \textit{traits} e removidas como funcionalidade independente. Em 2013 o coletor de lixo da linguagem foi removido em favor das regras de posse que foi desenvolvida ao longo do in\'{i}o de 2010 onde o gerenciamento de mem\'{o}ria atrav\'{e}s do sistema de posse foi consolidado para previnir \textit{bugs} de mem\'{o}ria.
+\par
+Em janeiro de 2014 o editor chefe do jornal do Dr. Dobb, Andrew Binstock \cite{Bin14}, comentou sobre as chances de Rust se tornar um competidor legit\'{i}mo para C++, junto com outras liguagens como: D, Go, Nim. De acordo com Binstock enquanto Rust era "Uma linguagem amplamente vista como notavelmente elegante", sua ado\c{c}\~{a}o era devagar pois mudava radicalmente de vers\~{a}o para vers\~{a}o. A primeira vers\~{a}o est\'{a}vel de Rust, a vers\~{a}o 1.0 foi anunciada no dia 15 de maio de 2015. O desenvolvimento do navegador Servo continuou lado a lado com o crescimento do Rust e em setembro de 2017, Firefox 57 foi lan\c{c}ado como a primeira vers\~{a}o do navegador que incorporava componentes do navegador Servo em um projeto chamado "Firefox Quantum"
+\par
+Escrever de 2020-Presente encapsulando as demiss\~{o}es da Mozilla, a Rust Foundation, a inclus\~{a}o de Rust no kernel do Linux e o pedido da casa branca.
+
+\section{\'{A}reas de Aplica\c{c}\~{a}o da Linguagem}
+Como Rust \'{e} uma linguagem de prop\'{o}sito geral ela possui v\'{a}rias \'{a}reas onde \'{e} usada as quais s\~{a}o:
+
+\subsection{Backend}
+\par
+Devido a sua velocidade e seguran\c{c}a Rust \'{e} bastante utilizado em projetos de \textit{backend} para poder se certificar de que o sistema seja r\'{a}pido e aguente um alto volume de usu\'{a}rios concorrentes sem que o sistema saia do ar, uma empresa que usa Rust em seus projetos \textit{backend} \'{e} a Amazon nos seus produtos AWS como:
+\begin{itemize}
+\item Firecracker uma solu\c{c}\~{a}o para virtualiza\c{c}\~{a}o.
+\item Bottlerocket, uma distribui\c{c}\~{a}o Linux e sistema de conteineriza\c{c}\~{a}o.
+\item Tokio, uma solu\c{c}\~{a}o de rede ass\'{i}ncrona.
+\end{itemize}
+\par
+Outro local onde Rust pode ajudar muito com seus pontos fortes e no pr\'{o}prio sistema da rotas da internet onde milh\~{o}es de usu\'{a}rios devem ser redirecionados em milissegundos para o conte\'{u}do correto para que sua experi\^{e}ncia seja flu\'{i}da e ininterrupta, para isso a Cloudflare criou sua rede de entrega de conte\'{u}do:
+\begin{itemize}
+  \item Pingora \cite{Wu24}, um firewall de casamento de padr\~{o}es e um \textit{framework} para construir redes programaveis que servem mais de 40 milh\~{o}es de requisi\c{c}\~{o}es por segundo
+\end{itemize}
+\par
+Com o movimento da internet das coisas crescendo v\'{a}rias empresas como a Microsoft vem tentando integrar seus sistemas de nuvem com dispositivos da internet das coisas para que voc\^{e} possa controlar toda sua casa atrav\'{e}s de um app para que o sistema de nuvem seja capaz de interagir com multiplos aparelhos de forma ass\'{i}ncrona e com agilidade a Microsoft opotou por Rust:
+\begin{itemize}
+\item Azure-IoT \'{e} um sistema de servidores \textit{Edge} usado para rodar servi\c{c}os Azure em aparelhos que sejam "Internet das Coisas"
+\item A Microsoft tamb\'{e}m usa Rust para criar m\'{o}dulos conteinerizados usando WebAssembly e Kubernetes para f\'{a}cil intera\c{c}\~{a}o com os aparelhos usando interfaces web.
+\end{itemize}
+
+\subsection{Sistemas Operacionais e Hardware}
+Rust sendo uma linguagem focada em performance e seguran\c{c}a de mem\'{o}ria n\~{a}o demorou muito para que fosse feita a proposta de que ela fosse usada no desenvolvimento do kernel do Linux e aplica\c{c}\~{o}es que lidassem diretamente com hardware. Em 2021 um pedido para coment\'{a}rio foi feito por Ojeda e ent\~{a}o come\c{c}ou o trabalho para incluir Rust no kernel, agora em 2024 suporte experimental para Rust no kernel est\'{a} come\c{c}ando. Mesmo Rust ainda estando no caminho de ser implementado no kernel do Linux j\'{a} temos exemplos da liguagem sendo usada em outros sistemas operacionais, a Microsoft j\'{a} come\c{c}ou a implementar Rust no kernel do Windows em bibliotecas contidas \cite{Wes23}.

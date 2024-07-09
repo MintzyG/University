@@ -1,0 +1,468 @@
+
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2023
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+% Aluno: Eric Hoffmann Fernandes Braga
+
+\chapterimage{ScalaH} % Chapter heading image ==>  Trocar este arquivo por outro 1200x468
+\chapter{ Conceitos b\'{a}sicos da Linguagem Rust}
+
+Neste cap\'{i}tulo ser\'{a} apresentado os conceitos basicos da linguagem Rust como vistos nos livros \cite{Klab14}, \cite{Car15} e \cite{Car16}. Estes livros sao os livros basicos para o estudo linguagem Rust.
+
+%%%%%%%%=================================
+\section{Vari\'{a}veis e constantes}
+%%%%%%%%=================================
+
+Diferente de muitas linguagens em Rust o padrão para variaveis e ser imutavel/constante, isso significa que uma variavel não pode receber outro valor depois que inicialmente atribuida, essa decisão feita pela fundacão Rust garante que voce possa aproveitar da segurança e concorrência que Rust oferece mais facilmente, mas você ainda tem a opcão de transformar uma variavel em mutavel caso deseje.
+\par
+\begin{lstlisting}[language=rust]
+fn main() {
+  // Cria uma variavel imutavel
+  let a = 2; 
+
+  // Cria uma variavel mutavel
+  let mut b = 3 
+}
+\end{lstlisting}
+\pagebreak
+\newpage
+Vamos ver exemplos de como isso difere de uma linguagem como C:
+\begin{lstlisting}[language=rust]
+// variables.rs
+fn main() {
+  // Cria uma variavel imutavel
+  let x = 2; 
+
+  // O esperado aqui em C e que se escreva o numero 2 no console
+  println!("O valor de x e: {x}");
+  
+  x = 3;
+
+  // O esperado aqui em C e que se escreva o numero 3 no console
+  println!("O valor de x e: {x}");
+}
+\end{lstlisting}
+\begin{lstlisting}[language=bash]
+$ rustc variables.rs
+$ ./variables
+> 2
+> 2
+\end{lstlisting}
+\par
+Aqui podemos ver que apesar de termos feito x = 3 no código a variavel continuou com o valor de '2' isso acontece pois as variaves sao imutaveis por padrão, logo, se quisermos mudar o valor de uma variavel em Rust temos que explicitamente declará-la como mutavel usando 'mut'.
+\begin{lstlisting}[language=rust]
+// variables.rs
+fn main() {
+  // Cria uma variavel imutavel
+  let mut x = 2; 
+
+  println!("O valor de x e: {x}");
+  
+  x = 3;
+
+  println!("O valor de x e: {x}");
+}
+\end{lstlisting}
+\begin{lstlisting}[language=bash]
+$ rustc variables.rs
+$ ./variables
+> 2
+> 3
+\end{lstlisting}
+\par
+Agora podemos ver que nosso código esta funcionando como esperavamos, e o valor de x muda quando nos atribuimos o valor 3 a ele no codigo, isso ocorre pois declaramos a variavel como 'mut'.
+\pagebreak
+\newpage
+
+\subsection{Constantes}
+
+Como variaveis imutaveis, constantes são valores que se ligam a um nome e não podem mudar, mas existem algumas diferenças entre constantes e variaveis. Primeiro, voce não pode usar 'mut' em uma constante, pois elas nao são só imutaveis por padrão, elas são imutaveis sempre. Segundo, constantes se declaram com a palavra chave 'const' ao inves de 'let' e o seu tipo deve obrigatoriamente ser definido usando \textit{type-annotations}, não se preocupe, logo em seguida voce descobrirá o que são \textit{type annotations}.
+\par
+Constantes podem ser declaradas em qualquer escopo, incluindo o global, e a última diferença é que constantes só podem ser atribuidas valores de expressões constantes, significando que só não podem ser valores que so sao possíveis de se computar na execução do programa.
+\par
+Aqui está um exemplo da declaração de uma constante:
+
+\begin{lstlisting}[language=rust]
+// constant.rs
+fn main() {
+  // Cria uma constante
+  const MyConst: u32 = 2; 
+}
+\end{lstlisting}
+
+\subsection{Shadowing}
+
+\textit{Shadowing} é o nome que programadores de Rust deram pra quando você re-declara uma váriavel que já existia antes, assim você sobrepõe o valor antigo da variavel com o valor novo, essa tecnica é comumente usada com váriaveis imutáveis. Uma váriavel que sofreu \textit{shadowing} continua existindo como seu novo valor até que ela mesma sofra \textit{shadowing} ou que acabe o escopo em que ela exista, isso permite padrões avancados de código como:
+
+\begin{lstlisting}[language=rust]
+// shadowing.rs
+fn main() {
+  // Cria uma variavel imutavel x
+  let x: u32 = 5;
+
+  // Aplica o shadowing dentro deste escopo
+  // transformando a variavel em 6
+  let x = x + 1;
+  {
+    // Aplica shadowing dentro deste escopo
+    // transformando a variavel em 12
+    let x = x * 2
+    println!("Valor de X no escopo interior e: {x}");
+  }
+  // O escopo finaliza logo a variavel volta a ser 6
+  println!("Valor de X no escopo exterior e: {x}");
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+$ rustc shadowing.rs
+$ ./shadowing
+> Valor de X no escopo interior e: 12
+> Valor de X no escopo exterior e: 6
+\end{lstlisting}
+
+\textit{Shadowing} se difere de declarar uma váriavel como 'mut' pois teremos um erro de compilação se tentarmos re-atribuir a váriavel sem usar a palavra chave 'let'. Usando 'let' nós podemos realizar algumas transformações em um valor mas ter o valor imutável depois que estas transformações acabarem. Outra vantagem de \textit{shadowing} e, como estamos basicamente criando outra variavel quando usamos 'let', nós podemos mudar o valor da variavel, mas reusar o mesmo nome.
+
+%%%%%%%%=================================
+\section{Tipos de Dados B\'{a}sicos}
+%%%%%%%%=================================
+
+Assim como outras linguagens Rust possui diversos tipos de dados que permitem que o compilador ache erros no código e otimize onde possível, mas a linguagem também possui tipos dinâmicos permitindo que os tipos que devem ser usados sejam inferidos pelo compilador durante a etapa de compilação sem que o usuário especifique explicitamente.
+\par
+Então se apenas declararmos a váriavel, o compilador e encarregado de decidir o tipo apropriado da váriavel em questão, porem se quisermos ter certeza de que estamos trabalhando com um tipo de dado específico podemos definí-lo usando \textit{type-annotations} onde entre a váriavel e seu valor decidimos seu tipo.
+\begin{lstlisting}[language=rust]
+fn main() {
+  // O compilador infere o tipo deste dado 
+  let a = 2; 
+
+  // Nos informamos o tipo u32 (Inteiro de 32 bits sem sinal)
+  let b: u32 = 3 
+}
+\end{lstlisting}
+\subsection{Inteiros}
+Em Rust se quisermos trabalhar com interios temos opcoes desde i8 ate i128 onde o número decide quantos bits de informação aquela váriavel pode guardar, então, um i8 pode guardar desde os numeros -127 até o número 128. Se não quisermos números negativos podemos especificar trocando a letra de 'i' para 'u' que significa \textit{unsigned} (sem sinal) assim um u8 pode guardar desde 0 ate 255 e ainda temos um tipo especial 'isize' que se define de acordo com a arquitetura de seu computador, sendo um i32 se o computador for 32 bits ou um i64 se o computador for 64 bits. Aqui estão todos os inteiros:
+\begin{lstlisting}[language=rust]
+//types.rs
+fn main() {
+  // O compilador infere o tipo deste dado 
+  let a = 0; 
+
+  let b: i8 = 1;
+  let c: i16 = -2;
+  let d: i32 = 3;
+  let e: i64 = -4;
+  let f: i128 = 5;
+  let g: isize = -6;
+  ...
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[language=rust]
+//types.rs
+  ...
+  let A: u8 = 1;
+  let B: u16 = 2;
+  let C: u32 = 3;
+  let D: u64 = 4;
+  let E: u128 = 5;
+  let F: usize = 6;
+  ...
+\end{lstlisting}
+\par
+Inteiros tambem pode ser escritos em outras bases numerais que nao sejam base decimal
+\par
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Literais & Exemplo      \\ \hline
+Decimal  & 1\_580\_000  \\ \hline
+Hex      & 0xff         \\ \hline
+Octal    & 0o77         \\ \hline
+Binário  & 0b1111\_0000 \\ \hline
+Byte     & b'a'         \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{lstlisting}[language=rust]
+//types.rs
+  ...
+  // 'Underlines' podem ser usados para melhor legibilidade
+  let Decimal = 1_580_00;
+  let Hex = 0xff;
+  let Octal = 0o77;
+  let Binario = 0b1111_0000;
+  let Byte = b'a';
+  ...
+\end{lstlisting}
+
+%%%%%%%%=================================
+\subsection{Floats}
+%%%%%%%%=================================
+
+Rust possui dois tipos primitivos para \textit{floats}, os quais são números com casas decimais.
+Os tipos de \textit{float} do Rust sao 'f32' e 'f64 que são de tamanhos 32 bit e 64 bit respectivamente. O valor padrão de um \textit{float} e 'f64' pois são capazes de mais precisão. Todos os  \textit{floats} possuem sinal.
+
+\begin{lstlisting}[language=rust]
+//types.rs
+  ...
+  let fa = 1.2; // f64
+
+  let fb: f32 = 3.1415 // f32
+  ...
+\end{lstlisting}
+
+\textit{Floats} em Rust seguem o padrao IEEE-754. O tipo 'f32' é de precisão única e o tipo 'f64' é de precisão dupla.
+\pagebreak
+\newpage
+
+%%%%%%%%=================================
+\subsection{Booleano}
+%%%%%%%%=================================
+
+O tipo booleano em Rust como em qualquer outra linguagem tem dois possiveis valores, \textit{true} e \textit{false} e são criadas usando a palavra chave 'bool'. Como qualquer outra tipo ele pode ser inferido pelo compilador ou ser \textit{type-annotated} pelo programador
+
+\begin{lstlisting}[language=rust]
+//types.rs
+  ...
+  let boolTrue = true; 
+
+  let boolFalse: bool = false // type-annotated
+  ...
+\end{lstlisting}
+
+O uso de booleans veremos mais tarde na seção de controle de fluxo
+
+%%%%%%%%=================================
+\subsection{Caracteres}
+%%%%%%%%=================================
+
+\begin{lstlisting}[language=rust]
+//types.rs
+  ...
+  let w = 'w';
+  let z: char = 'z' \\ type-annotated
+}
+\end{lstlisting}
+
+Cáracteres são o tipo alfabético mais simples da linguagem, diferentemente de strings cáracteres são envolvidos em aspas simples ao invés de aspas duplas. O tipo char tem 4 bytes em tamanho e representa valores escalares de Unicode, o que significa que os caracteres no Rust podem representar desde caracteres ASCII, à caracteres Chineses à até emojis.
+
+%%%%%%%%=================================
+\subsection{Strings}
+%%%%%%%%=================================
+
+A fazer:
+\begin{itemize}
+  \item String
+  \item \&str
+  \item \&'static str
+  \item Box str
+  \item Rc str
+  \item Arc str
+  \item byte str
+  \item String literals
+  \item Specialized String
+  \item Interoperable String
+\end{itemize}
+
+%%%%%%%%=================================
+\section{Tipos de Dados Compostos}
+%%%%%%%%=================================
+
+%%%%%%%%=================================
+\subsection{Tuplas}
+%%%%%%%%=================================
+
+As tuplas são uma maneira de agrupar multiplos valores de diferentes tipos em um unico tipo composto, tuplas possuem tamanho fixo e não podem diminuir ou aumentar depois de criadas. Nós escrevemos uma tupla criando uma lista separada por vírgulas, tuplas podem ser tanto inferidas quanto \textit{type-annotated}.
+\pagebreak
+\newpage
+\begin{lstlisting}[language=rust]
+//compounds.rs
+fn main() {
+  let tupa = (500, 6.4, 1);
+
+  // Type-annotated
+  let tupb: (i32, f64, u8) = (500, 6.4, 1);
+  ...
+\end{lstlisting}
+
+Nós então com uma tupla podemos usar casamento de padrão para desconstruir a tupla e atribuir cada elemento a uma váriavel.
+
+\begin{lstlisting}[language=rust]
+//compounds.rs
+  ...
+  let tup = (500, 6.4, 1);
+  let (x, y, z) = tup;
+  println!("O valor de x e {x} e z {z}")
+  ...
+\end{lstlisting}
+
+Também podemos acessar um elemento da tupla diretamente usando a notacão de ponto:
+
+\begin{lstlisting}[language=rust]
+//compounds.rs
+  ...
+  let quinhentos = tup.0;
+  let seis_ponto_quatro = tup.1;
+  let um = tup.2;
+  ...
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+$ rustc compounds.rs
+$ ./compounds
+> Valor de X e 500 e z 1
+\end{lstlisting}
+
+Uma tupla sem nenhum valor tem um nome especial, \textit{unit}. Esse valor e seu tipo ambos sao escritos '()' e representam um valor vazio ou tipo de retorno vazio. Expressões implicitamente retornam o valor \textit{unit} se elas não retornam nenhum outro valor.
+
+\pagebreak
+\newpage
+
+%%%%%%%%=================================
+\subsection{Arrays}
+%%%%%%%%=================================
+
+Outra maneira de ter uma coleção de valores e um \textit{array}, porém diferente de uma tupla, todos os elementos de um \textit{array} devem ser do mesmo tipo. Diferente de outras linguagens \textit{arrays} em Rust tem tamanho fixo. Valores em um array são escritos em uma lista separada por vírgulas dentro de colchetes.
+
+\begin{lstlisting}[language=rust]
+//compounds.rs
+  ...
+  // O tamanho e o tipo sao inferidos 
+  let arr = [1, 2, 3, 4, 5];
+  ...
+\end{lstlisting}
+
+\textit{Arrays} são úteis quando você sabe que o número de elementos não muda. Por exemplo um \textit{array} com os 12 meses do ano. Um array também como outras váriaveis pode ser inicializado usando \textit{type-annotations}.
+
+\begin{lstlisting}[language=rust]
+//compounds.rs
+  ...
+  // O tamanho e o tipo sao descritos
+  let arrAnnotated: [i32, 5] = [1, 2, 3, 4, 5];
+
+  // Tambem e possivel inicializar um array com o mesmo valor
+  // em todas as suas posicoes
+  let same = [3; 5];
+  // Resulta em = [3, 3, 3, 3, 3]
+\end{lstlisting}
+
+Podemos acessar os elemenos de um array usando colchetes e a posição após seu nome
+
+\begin{lstlisting}[language=rust]
+//compounds.rs
+  ...
+  let arr = [1, 2, 3, 4, 5];
+  
+  let first = a[0];
+  let middle = a[2]
+  let last = a[4];
+}
+\end{lstlisting}
+
+Se um elemento fora do array tentar ser acessado no código, a \textit{engine} do Rust avaliará a expressão para um pânico e terminara a execução do código, resultando no seguinte resultado no terminal:
+
+\begin{lstlisting}[language=bash]
+thread 'main' panicked at 'index out of bounds: 
+the len is 5 but the index is 10', src/main.rs:19:19
+note: run with `RUST_BACKTRACE=1` 
+environment variable to display a backtrace
+\end{lstlisting}
+
+\pagebreak
+\newpage
+
+%%%%%%%%=================================
+\section{Operadores e Express\~{o}es em Rust}
+%%%%%%%%=================================
+
+%%%%%%%%=================================
+\subsection{Operadores}
+%%%%%%%%=================================
+
+Operadores disponíveis em Rust se assimilam com os operadores disponíveis em C com algumas excessões específicas que veremos agora.
+
+\begin{lstlisting}[language=rust]
+//operators.rs
+fn main() {
+  // Operacoes matematicas
+  1 + 2; // Soma
+  2 - 1; // Subtracao
+  2 * 4; // Multiplicacao
+  4 / 2; // Divisao
+
+  true && false; // Operacao logica AND
+  true || false; // Operacao logica OR
+  !true; // Operacao logica NOT
+
+  0b1111 & 0b11111; // Operacao Bitwise AND
+  0b0110 | 0b0101; // Operacao Bitwise OR
+  0b0110 ^ 0b1001; // Opercao Bitwise XOR
+
+  1u32 << 5; // Opercao Bitshift Left
+  32u32 >> 5; // Operacao Bitshift Right
+
+  // Excessao nao presente em linguagens tipo C
+  -2.5e-7; // Notacao cientifica
+}
+\end{lstlisting}
+
+%%%%%%%%=================================
+\subsection{Express\~{o}es}
+%%%%%%%%=================================
+
+Um programa em Rust é majoritariamente composto de declarações
+
+\begin{lstlisting}[language=rust]
+//expressions.rs
+fn main() {
+  // declaracao 
+  // declaracao 
+  // declaracao 
+  // declaracao 
+}
+\end{lstlisting}
+
+\pagebreak
+\newpage
+
+Existem alguns tipos de declarações em Rust, as duas mais comums são a atribuição de uma váriavel e usar ';' com uma expressão.
+
+\begin{lstlisting}[language=rust]
+//expressions.rs
+...
+    // atribuicao de variavel
+    let x = 5;
+
+    // expressoes;
+    x;
+    x + 1;
+    15;
+...
+\end{lstlisting}
+Blocos tambem sao expressões, logo eles podem ser usados como valores em atribuições
+\begin{lstlisting}[language=rust]
+//expressions.rs
+...
+  let x = 5u32;
+  let y = {
+    let x_quadrado = x * x;
+    let x_cubo = x_squared * x;
+
+    // esta expressao vai ser atribuida a `y`
+    x_cube + x_squared + x // a falta do ';' define o retorno
+  };
+
+  // O ';' suprime a expressao dentro do {}
+  let z = {
+    // logo a expressao {} nao tem valor, retornando '()'
+    2 * x;
+  };
+
+  println!("x e {:?}, y e {:?} e z e {:?}", x, y, z);
+}
+\end{lstlisting}
+\begin{lstlisting}[language=bash]
+$ rustc expressions.rs
+$ ./expressions
+> x e 5, y e 155 e z e ()
+\end{lstlisting}

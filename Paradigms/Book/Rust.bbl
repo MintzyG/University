@@ -1,0 +1,39 @@
+\begin{thebibliography}{Wes23}
+
+\bibitem[Bin14]{Bin14}
+Andrew Binstock.
+\newblock The rise and fall of languages in 2013, 2014.
+\newblock
+  \url{https://drdobbs.com/jvm/the-rise-and-fall-of-languages-in-2013/240165192}
+  [Accessed: (04.04.2024)].
+
+\bibitem[Gou15]{Car15}
+Carol~Nichols Goulding.
+\newblock Rustlings, 2015.
+\newblock \url{https://rustlings.cool/} [Accessed: (22.04.2024)].
+
+\bibitem[Gou16]{Car16}
+Carol~Nichols Goulding.
+\newblock The rust book, 2016.
+\newblock \url{https://doc.rust-lang.org/book/} [Accessed: (22.04.2024)].
+
+\bibitem[Kla14]{Klab14}
+Steve Klabnik.
+\newblock Rust by example, 2014.
+\newblock \url{https://doc.rust-lang.org/rust-by-example/} [Accessed:
+  (22.04.2024)].
+
+\bibitem[Wes23]{Wes23}
+David Weston.
+\newblock Bluehat il 2023 - david weston - default security, 2023.
+\newblock \url{https://www.youtube.com/watch?v=8T6ClX-y2AE} [Accessed:
+  (04.04.2024)].
+
+\bibitem[Wu24]{Wu24}
+Yuchen Wu.
+\newblock Open sourcing pingora: our rust framework for building programmable
+  network services, 2024.
+\newblock \url{https://blog.cloudflare.com/pingora-open-source} [Accessed:
+  (04.04.2024)].
+
+\end{thebibliography}

@@ -1,0 +1,35 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2023
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+% Aluno:
+
+
+
+\chapterimage{ScalaH} % Chapter heading image ==>  Trocar este arquivo por outro 1200x468
+\chapter{Ferramentas}
+
+Aqui exploraremos as ferramentas que permitem que a promação em Rust seja facil e rapido, e disponibilize para nos o que precisamos para achar erros nos nossos codigos compila-los e publicalos
+
+    \section{RustUp}
+
+    Download: https://rustup.rs/
+
+    Rustup é uma ferrmenta que baixa configura e instala todo o ecossistema Rust para você sem que você tenha que se preocupar com sistema, versoes, etc.
+
+    Atualmente se encontra na versão 1.27.1
+
+    Para usar rustup basta que você apenas rode o seguinte comando no seu terminal:
+
+    \begin{lstlisting}[language=rust]
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    \end{lstlisting}
+
+
+    \section{Cargo}
+
+    Cargo é o package manager e project manager do Rust, isso significa que ele é responsavel por pegar as dependencias dos seus projetos e gerenciar seus projetos.
+
+    Cargo é instalado pelo programa Rustup.
+
+    Para usalo basta apenas iniciar um projeto com "cargo init" isso criara uma pasta com o arquivo "cargo.toml" e uma pasta src com um arquivo "main.rs", no arquivo cargo.toml basta apenas escrever os nomes das dependencias que voce deseja incluir em seu projeto. para testar o seu projeto use "Cargo run", para criar um novo modulo basta usar "Cargo new" e para compilar e exportar o seu projeto basta usar "Cargo build".

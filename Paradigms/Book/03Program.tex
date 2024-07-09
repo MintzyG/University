@@ -1,0 +1,321 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2023
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+% Aluno: Eric Hoffmann Fernandes Braga
+
+
+\chapterimage{ScalaH} % Chapter heading image ==> Trocar este arquivo por outro 1200x468
+\chapter{ Programa\c{c}\~{a}o em Rust}
+
+Nesse capítulo veremos como programar em Rust usando seu conjunto básico de funcionalidade.
+\begin{itemize}
+  \item Entrada e Saida
+  \item Controle de Fluxo
+  \item La\c{c}os
+  \item Fun\c{c}oes
+  \item Modulos
+\end{itemize}
+
+Ao final entenderemos sobre o processo de entrada e saída de rust, como controlar o fluxo de código com condicionais e switchs e como criar repetições como abstrair código com funções e módulos.
+
+%%%%%%%%======================
+\section{Entradas e sa\'{\i}das}
+%%%%%%%%======================
+
+Entrada e saida em Rust são gerenciadas por uma série de Macros definidas em std::fmt algumas dessas macros incluem:
+\begin{itemize}
+  \item \textit{format!} escreve texto formatado para \textit{String} resultado
+  \item \textit{print!} faz o mesmo que \textit{format!} so que escreve no console
+  \item \textit{println!} faz o mesmo que \textit{print!} so que com uma nova linha ao final
+  \item \textit{eprint!} faz o mesmo que print mas escreve em erro padrao (io::stderr)
+  \item \textit{eprintln!} faz o mesmo que \textit{eprint!} mas com uma nova linha ao final
+\end{itemize}
+\par
+Para podermos usar esses métodos de entrada e saída precisamos primeiro entender como a interpolação de string funciona:
+
+\pagebreak
+\newpage
+
+\subsection{Interpola\c{c}ao}
+
+Para interpolar em uma \textit{String} usamos chaves '{}' dentro da string seguido do paramêtro que queremos substituir fora da \textit{String} por exemplo:
+
+\begin{lstlisting}[language=rust]
+interpolation.rs
+fn main() {
+  print("Ola {} numero {}", "terra", 4);
+}
+\end{lstlisting}
+
+Neste exemplo podemos ver que as chaves pegam em ordem os argumentos, assim o primeiro par de chaves pega "terra" e o segundo pega "4".
+
+Caso voce deseje tambem e possível nomear as váriaveis que você deseja dentro das chaves para pegá-las em quaisquer ordem através de seu nome.
+
+\begin{lstlisting}[language=rust]
+interpolation.rs
+fn main() {
+  print("Ola {planeta} numero {numero}", planeta = "terra", numero = 4);
+}
+\end{lstlisting}
+
+Outra maneira de interpolar em strings é numerar as chaves com qual váriavel você deseja usar:
+
+\begin{lstlisting}[language=rust]
+interpolation.rs
+fn main() {
+  print("{0} gosta de {1} mas {1} nao gosta de {0}", "Joao", "Alice");
+}
+\end{lstlisting}
+
+Dentro da chaves tambem é possivel formatar os dados sendo interpolados:
+
+\begin{lstlisting}[language=rust]
+interpolation.rs
+fn main() {
+  println!("Base 10: {}", 69420); // 69420
+  println!("Base 2 (binary): {:b}", 69420); // 10000111100101100
+  println!("Base 8 (octal): {:o}", 69420); // 207454
+  println!("Base 16 (hexadecimal): {:x}", 69420); // 10f2c
+}
+\end{lstlisting}
+
+Tambem é possivel justificar texto:
+
+\begin{lstlisting}[language=rust]
+interpolation.rs
+fn main() {
+  println!("{number:>5}", number=1); // "    1"
+  println!("{number:<5}", number=1); // "1    "
+  // Voce pode substituir o caractere do padding pelo caracter que quiser:
+  println!("{number:0>5}", number=1); // "00001"
+  println!("{number:0<5}", number=1); // "10000"
+  // e possivel usar argumentos nomeados com "$"
+  println!("{number:0>$width}", number = 1, width = 5); // "00001"
+}
+\end{lstlisting}
+
+\subsection{Format!}
+
+\textit{Format!} recebe um string e váriaveis interpola as váriaveis na string e retorna como outra string para ser usada no código.
+
+
+\begin{lstlisting}[language=rust]
+format.rs
+fn main() {
+  let x = format!("Ola {}!", "Mundo");
+  print!(x); // Resultado: "Ola Mundo!"
+}
+\end{lstlisting}
+
+\subsection{Print!}
+
+\textit{Print!} faz o mesmo que \textit{Format!} só que escreve o resultado em std::out (console/terminal) 
+
+\begin{lstlisting}[language=rust]
+print.rs
+fn main() {
+  print!("Ola {}!", "Mundo");
+  print!("Ola {}!", "Mundo"); 
+  // Resultado: "Ola Mundo!Ola Mundo!"
+}
+\end{lstlisting}
+
+\subsection{Println!}
+
+\textit{Println!} faz o mesmo que \textit{Print!} só que acrescenta uma nova linha ao final.
+
+\begin{lstlisting}[language=rust]
+println.rs
+fn main() {
+  println!("Ola {}!", "Mundo");
+  println!("Ola {}!", "Mundo");
+  // Resultado: "Ola Mundo!
+  //             Ola Mundo!"
+}
+\end{lstlisting}
+
+\subsection{Saidas de Erros}
+
+\textit{Eprint! e Eprintln!} funcionam igual a \textit{Print! e Println!} só que sua saída de texto e em io:stderr, isso significa que essas mensagens ao ocorrer fecharão seu programa com base em uma condição e mostrarão essa mensagem no cosole apos o programa ter fechado.
+
+\begin{lstlisting}[language=rust]
+errors.rs
+fn main() {
+  let config = Config::build(&args).unwrap_or_else(|err| {
+    eprintln!("Problem parsing arguments: {err}");
+    process::exit(1);
+  });}
+\end{lstlisting}
+
+Se tentarmos rodar esse programa com argumentos insuficientes teremos:
+
+\begin{lstlisting}[language=bash]
+$ cargo run > out.txt
+> Problem parsing arguments: not enough arguments
+\end{lstlisting}
+
+%%%%%%%%======================
+\section{Controle de Fluxo}
+%%%%%%%%======================
+
+Temos múltiplas maneiras de controlar quais pedaços de codigo queremos executar e quantas vezes queremos executar, pra isso se da o nome de controle de fluxo, pois estamos controlando por onde e como nosso programa passa e executa, algumas estruturas que usamos para isso são:
+
+\subsection{If e If else}
+
+O \textit{if} deixa você avaliar expressões lógicas e com base em seu resultado executar trechos específicos de código:
+
+\begin{lstlisting}[language=rust]
+if.rs
+fn main() {
+  let x = 5;
+  if x < 6 {
+    println!("X e menor que 6");
+  } else if x == 6{
+    println!("X e 6");
+  } else {
+    println!("X e maior que 6");
+  }
+\end{lstlisting}
+
+Aqui criamos uma condição lógica onde se x for menor que 5 temos o resultado: "X e menor que 6" que é a primeira condicao do if e so acontece caso a expressao logica seja verdadeira, ao mudar x para 6 caimos no segundo caso onde olhamos outras possibilidades e avaliamos elas novamente com outro if atraves da concatenacao de um "else" e um "if", entao conseguimos o resultado "X e 6", e por ultimo caso mudemos x para 7 cairemos no caso else que so acontece caso todas as expressoes logicas anteriores sejam falsas, e teremos o resultado: "X e maior q 6". 
+
+\subsection{Match}
+
+A estrutura match e extramente semelhante a estrutura de \textit{Switch Case} em C, onde podemos especificar varios casos e usar casamento de padroes em cima de uma variavel alvo para decidir qual caso executar:
+
+\begin{lstlisting}[language=rust]
+match.rs
+fn main() {
+  let x = 12;
+  match number {
+    // Podemos casar o padrao com um unico valor
+    1 => println!("One!");
+    // Com multiplos valores
+    2 | 3 | 5 | 7 | 11 => println!("Numero primo!");
+    // Com intervalos inclusivos
+    13..=19 => println!("Um Adolescente!");
+    // Lidar com quaisquer outro caso possivel
+    // que nao tenha sido especificado
+    _ => println!("Nada de especial");
+  }
+}
+\end{lstlisting}
+
+\subsection{La\c{c}os de Repeti\c{c}\~{a}o}
+
+Estruturas de laco de repeticao nos permitem repetir trechos de codigo de diversas maneiras, desde enquanto uma expressao logica for verdade ate infinitamente:
+\par
+O primeiro e mais simples laco que existe e o \textit{loop}, uma estrutura que executa seu escopo infinitamente a nao ser que encontre um \textit{break}.
+\begin{lstlisting}[language=rust]
+loops.rs
+fn main() {
+  loop {
+    println!("Ola Mundo!");
+  }
+  \\ Resultado:
+  \\ "Ola Mundo!"
+  \\ "Ola Mundo!"
+  \\ "..."
+  \\ Executara infinitamente
+}
+\end{lstlisting}
+O laco \textit{while} pode ser usado para executar um trecho de codigo ate que uma condicao se torne falsa
+\begin{lstlisting}[language=rust]
+loops.rs
+fn main() {
+  let mut x = 1;
+  while x < 10 {
+    println!("Ola Mundo!");
+    x += 1;
+  }
+  \\ Resultado: Escrevera "Ola Mundo!" dez vezes
+}
+\end{lstlisting}
+O ultimo laco o \textit{for range} permite que seja extraido um dado de uma estrutura e o use durante o laco que esta sendo executado:
+\begin{lstlisting}[language=rust]
+loops.rs
+fn main() {
+  let names = vec!["Bob", "Frank", "Ferris"];
+  for x in 1..=100 { println("{}", x); }
+  \\ Resulta em todos os numeros de 1 a 100 sendo escritos
+  \\ Aqui vemos duas estruturas de controle de fluxo 
+  \\ sendo usadas em paralelo
+  for name in names.iter() {
+    match name {
+      &"Ferris" => println!("Tem um Rustaceano entre nos"),
+      _ => println!("Ola {}", name),
+    }
+  }
+  \\ Resultado: caso ele ache o nome ferris no vetor ele escrevera
+  \\ "Tem um Rustaceano entre nos" e "Ola Ferris"
+  \\ Caso o nome nao esteja no vetor nada sera escrito
+}
+\end{lstlisting}
+
+%%%%%%%%======================
+\section{Fun\c{c}\~{o}es}
+%%%%%%%%======================
+
+Funcoes em Rust sao declaradas usando a palavra chave "fn", seus valores de entrada devem ser \textit{type-annotated} e se a funcao possui valor de retorno ele deve ser indicado usando "->"
+\par
+A ultima expressao dentro de uma funcao sera usada como valor de retorno, alternativamente a palavra chave \textit{return} pode ser usada para retornar um valor antes da ultima expressao, mesmo de dentro de lacos de repeticao ou estruturas logicas.
+\par Diferente de C nao ha restricao na ordem da definicao de funcoes, lhe permitindo chamar uma funcao no codigo, em linhas anteriores a sua declaracao.
+\\
+\\
+{\huge Exemplo:}
+\begin{lstlisting}[language=rust]
+functions.rs
+fn main() {
+  // Chamada antes da declaracao e possivel  
+  if is_odd(3) {
+    println!("Impar");
+  } else {
+    println!("Par");
+  }
+  hello("Sophia");
+}
+
+fn is_odd(n: i32) -> bool {
+  if n % 2 == 0 { return false; }
+  // Para explicitar ultima expressao nao se inclui ";"
+  n % 2 == 0
+}
+
+// Quando uma funcao nao retorna nada ela na verdade retorna "()"
+// Quando a funcao retorna o tipo unitario "()"
+// O retorno pode ser omitido
+fn hello(x: str) { println!("Hello {}!", x); }
+\end{lstlisting}
+
+\pagebreak
+\newpage
+
+%%%%%%%%======================
+\section{M\'{o}dulos}
+%%%%%%%%======================
+
+Modulos sao uma colecao de itens como funcoes, structs, \textit{traits}, \textit{impl} onde voce pode acessar todos seus elementos.
+
+\begin{lstlisting}[language=rust]
+functions.rs
+mod meu_modulo{
+  // Todas as funcoes em modulos sao privadas por padrao
+  fn helloMod() {
+      println!("Hello Module!");
+  }
+  // A funcao pode ser tornada publica pela palavra chave 'pub'
+  pub fn helloWorld() {
+      println!("Hello World");
+  }
+  // Itens dentro de um modulo podem ser acessados por outros itens
+  // Modulos podem ser aninhados 
+  //
+}
+
+fn main() {
+  // Se accessa itens dentro de modulos usando '::'
+  meu_modulo::helloWorld();
+}
+\end{lstlisting}
+
