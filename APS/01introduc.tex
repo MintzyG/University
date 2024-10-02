@@ -1,0 +1,192 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ciência da Computação
+% Campos, RJ,  2024
+% Disciplina: Análise e Projeto de Sistemas
+% Aluno: Eric Hoffmann Fernandes Braga
+
+\chapterimage{sistemas.png}
+\chapter{Introdu\c{c}\~{a}o}
+O sistema de estudio de filmagem e edição será um sistema para uma empresa que oferece serviços de edição e filmagem com utilização de camera virtual. Os contratos que este estudio comporta vem desde anuncios e comerciais, filmes, series, clips musicais, até cenas para jogos e \textit{motion capture}.
+Neste documento apresentamos, passo a passo, como este sistema funciona e cada uma das partes que o compõe.
+\section{Visão Geral do Sistema}
+O sistema será dividido em várias etapas, cada uma delas sendo crucial para que o estudio possa usar o sistema sem problemas, nas próximas seções vamos explorar do que consiste cada sub-sistema.
+  \subsection{Central de Edição}
+  A central de edição é onde se encontram os sistemas de trabalho dos editores do sistema, todos equipados com computadores potentes conectados a internet via ethernet com 10 Gigabit de download. Os computadores também estão conectados ao servidor central do estudio para facilitar \textit{file streaming}, especialmente para arquivos extremamente grandes. 12 estações de edição serão instaladas nessa seção.
+  \subsection{Centro de filmagem}
+  A casa da \textit{tela infinita}, o centro de filmagem é onde a magica acontece. Os equipamentos presentes nessa seção são, a tela infinita de LED, guiada por uma camera virtual conectada a um computador de linha, multiplos microfones e cameras de teto para \textit{motion capture}, todas conectadas ao computador o qual está conectado ao servidor central para armazenar todas as gravações e informações de movimentação para que já possam ser usadas pelos editores. Também estão presentes multiplos notebooks touch para que possa se testar cenários e objetos na gravação virtual por múltiplos produtores e diretores ao mesmo tempo.
+  \subsection{Centro de Motion Capture}
+  Equipado com 8 roupas Rokoko e 25 \textit{Base Cameras} para auxiliar em \textit{Tracking}, todos estes equipamentos conectados a um computador de linha e um computador ajudante para processar os dados e polir os resultados ao mesmo tempo, ambos os computadores conectados ao servidor central para arquivar e disponibilzar os dados para os editores assim que as gravações estiverem completas. O local também possui dois monitores e um sistema de som \textit{surround} para auxiliar os atores a fazerem seus trabalhos.
+  \subsection{Centro de Scanning}
+  Neste lugar é onde todos os \textit{3D scans} são feitos para uso em efeitos visuais durante a edição, ou para animações, possui um computador de linha conectado ao servidor central e 100 cameras de alta qualidade e com capacidade LIDAR, arranjadas em 10 alturas diferentes em formato de esfera para capturar perfeitamente de todos os angulos o sujeito do \textit{3D scan}.
+  \subsection{Data Center}
+  Localizado em outro prédio em outro bairro da cidade, o centro de dados é usado para armazenar informação interna de qual sistema está livre quando, a rotina dos editores, os backups de projetos já finalizados para diminuir a carga do servidor central, e outras informações gerais do estudio.
+  \subsection{Servidor Interno}
+  Centralmente localizado no prédio e conectado a todos os computadores através de fibra ótica o sevidor central armazena os arquivos e dados de projetos ativos para poder rapidamente fazer o \textit{streaming} desses dados para oos computadores que precisam para que não seja disperdiçado espaço de armazenamento, o servidor também recebe os dados e ativos completos dos centro quando os mesmos são gerados e salvos. O servidor central é indexado através de uma base de dados para assim poder armazenar milhares de dados e ainda assim acha-los rapidamente graças ao indice. No servidor central também é gerenciado um site para que empresas que contratem o estudio possam entrar informações sobre seus contratos e ver os resultados do que pediram sem ter que comparecer ao estudio, como se fosse um \textit{Youtube} interno. O site também permite que o cliente de \textit{feedback} do seu pedido, tanto por texto, quanto marcando o vídeo com marcações e desenhos para simbolizar e mostrar o que desejam aprimorado.
+\section{Lista de componentes} 
+
+Aqui serão exemplificados os componentes que fazem parte do sistema de estudio de gravação, com imagens e diagramas para ajudar a ilustrar como o sistema funciona
+\subsection{Lista de Componentes: Hardware}
+\subsubsection{Estações de Edição}
+\begin{itemize}
+    \item 12 computadores equipados com processadores \textbf{AMD Ryzen 9}, 64GB de RAM, placas gráficas \textbf{NVIDIA RTX 4090}, conectados via Ethernet de 10 Gigabit ao servidor central.
+\end{itemize}
+
+\subsubsection{Servidores de Armazenamento}
+\begin{itemize}
+    \item O servidor central será equipado com dois processadores AMD EPYC 7763 de 64 núcleos, 1TB de RAM DDR4 ECC e 1PB de armazenamento distribuído em discos SSD NVMe, organizados em RAID 6 para maior redundância e segurança dos dados. Ele contará com duas GPUs NVIDIA A100 de 40GB, otimizadas para renderização e processamento de grandes volumes de dados. A conectividade entre o servidor e as estações será garantida por uma rede de fibra ótica de 10 Gbps, assegurando a transferência rápida de dados entre as diferentes partes do sistema, suportando as demandas intensivas de armazenamento e processamento simultâneo.
+\end{itemize}
+
+\subsubsection{Equipamentos de Motion Capture}
+\begin{itemize}
+  \item 8 roupas \textbf{Rokoko}, 25 \textbf{index base stations} para captura de movimento, múltiplos microfones de alta sensibilidade.
+\end{itemize}
+
+\subsubsection{Equipamentos de Scanning 3D}
+\begin{itemize}
+    \item Os equipamentos de scanning 3D incluirão 100 câmeras Intel RealSense L515, que utilizam tecnologia LIDAR para capturar objetos em alta definição.
+\end{itemize}
+
+\subsubsection{Notebooks para Visualização}
+\begin{itemize}
+    \item Múltiplos notebooks \textbf{Microsoft Surface Laptop Studio}, equipados com telas sensíveis ao toque de alta resolução, serão usados para testes e pré-visualização durante as gravações virtuais.
+\end{itemize}
+
+\subsubsection{Monitores e Sistema de Som}
+\begin{itemize}
+    \item Dois monitores grandes para feedback visual e sistema de som \textbf{surround} para os atores no centro de captura de movimento.
+\end{itemize}
+
+\subsubsection{Tela Infinita de LED}
+\begin{itemize}
+    \item Painel de LED de alta resolução, formando um círculo fechado com 20 metros de diâmetro e 5 metros de altura, incluindo um teto de LED integrado. Esta configuração é projetada para gerar cenários virtuais imersivos em tempo real durante as filmagens, criando um ambiente visual contínuo e envolvente.
+\end{itemize}
+
+\subsection{Câmeras Virtuais}
+\begin{itemize}
+    \item Duas câmeras virtuais de alta definição \textbf{NVIDIA Omniverse™ 3D Cameras}, conectadas a um sistema de rastreamento para capturar imagens de múltiplos ângulos. Estas câmeras são coordenadas com a tela de LED para garantir uma integração precisa com os cenários virtuais.
+\end{itemize}
+
+\subsubsection{Equipamento de Som}
+\begin{itemize}
+    \item Sistema de microfones de teto de alta sensibilidade \textbf{Sennheiser MKE 2} para captura de áudio direcional, e fones de ouvido sem fio \textbf{Sony MDR-7506} para monitoramento de som pelos diretores.
+\end{itemize}
+
+\subsection{Computadores na Sala de Gravação}
+
+\subsubsection{Computador de Linha}
+\begin{itemize}
+    \item Equipado com processador \textbf{AMD Ryzen Threadripper}, 128GB de RAM, placa gráfica \textbf{NVIDIA RTX 4090}, 4TB SSD, para processamento e controle da tela infinita e câmeras virtuais.
+\end{itemize}
+
+\subsubsection{Computador Auxiliar}
+\begin{itemize}
+    \item Similar ao computador de linha, com 64GB de RAM, usado para captura e processamento dos dados de gravação em paralelo.
+\end{itemize}
+
+\subsection{Computadores no Centro de Motion Capture}
+
+\subsubsection{Computador de Linha}
+\begin{itemize}
+    \item Equipado com processador \textbf{AMD Ryzen Threadripper}, 256GB de RAM, placa gráfica \textbf{NVIDIA RTX 4090}, 4TB SSD, para processar os dados do sistema de captura de movimento.
+\end{itemize}
+
+\subsubsection{Computador Auxiliar}
+\begin{itemize}
+    \item Similar ao computador de linha, com 128GB de RAM, usado para pré-processar e limpar os dados antes de enviá-los para edição.
+\end{itemize}
+
+\subsection{Computadores no Centro de Scanning}
+
+\subsubsection{Computador de Linha}
+\begin{itemize}
+    \item Equipado com processador \textbf{AMD EPYC}, 256GB de RAM, placa gráfica \textbf{NVIDIA Quadro RTX 6000}, 4TB SSD, para processar os dados de escaneamento 3D e renderização.
+\end{itemize}
+
+\subsubsection{Computador Auxiliar}
+\begin{itemize}
+    \item Equipado com processador \textbf{AMD Ryzen 9}, 128GB de RAM, placa gráfica \textbf{NVIDIA RTX 3080}, 2TB SSD, para armazenamento temporário e processamento em lote de modelos 3D.
+\end{itemize}
+
+\subsection{Lista de Componentes: Software}
+
+\subsubsection{Software de Edição}
+\begin{itemize}
+    \item \textbf{Adobe Premiere Pro}, \textbf{DaVinci Resolve}, ou softwares proprietários, integrados ao servidor central para acesso rápido a projetos.
+\end{itemize}
+
+\subsubsection{Software de Motion Capture}
+\begin{itemize}
+    \item \textbf{Rokoko Studio} para captura e processamento de dados de movimento.
+\end{itemize}
+
+\subsubsection{Software de Scanning 3D}
+\begin{itemize}
+    \item \textbf{Agisoft Metashape} ou software similar para criar modelos tridimensionais a partir das imagens capturadas pelas câmeras.
+\end{itemize}
+
+\subsubsection{Sistema de Gerenciamento de Projetos}
+\begin{itemize}
+    \item Ferramenta para gestão de contratos e feedback de clientes via site.
+\end{itemize}
+
+\subsubsection{Sistema de Streaming de Arquivos}
+\begin{itemize}
+    \item Sistema de gerenciamento de arquivos integrado ao servidor central para streaming em tempo real dos dados de gravação e edição.
+\end{itemize}
+
+\subsection{Lista de Componentes: Banco de Dados}
+
+\subsubsection{Banco de Dados de Projetos Ativos}
+\begin{itemize}
+    \item Armazena informações de vídeos, contratos, status dos projetos, e feedback dos clientes.
+\end{itemize}
+
+\subsubsection{Banco de Dados de Backup}
+\begin{itemize}
+    \item Utilizado para arquivar projetos finalizados e liberar espaço no servidor central.
+\end{itemize}
+
+\subsubsection{Banco de Dados do Site}
+\begin{itemize}
+    \item Gerencia as contas de clientes, informações de contratos e feedbacks.
+\end{itemize}
+
+\subsection{Lista de Componentes: Pessoas}
+\begin{itemize}
+  \item \textbf{Editores:} Responsáveis pela edição de vídeos, animações e efeitos visuais.
+  \item \textbf{Produtores:} Supervisores dos projetos, garantindo a execução adequada do trabalho.
+  \item \textbf{Diretores:} Supervisionam as gravações e filmagens, garantindo a visão criativa do projeto.
+  \item \textbf{Técnicos de Motion Capture:} Responsáveis por operar e manter o sistema de captura de movimento.
+  \item \textbf{Atores de Motion Capture:} Profissionais treinados que executam as ações a serem capturadas digitalmente.
+  \item \textbf{Equipe de Suporte Técnico:} Responsável por manter a infraestrutura e resolver problemas técnicos.
+  \item \textbf{Clientes:} Empresas que contratam os serviços e utilizam o sistema para acompanhamento e feedback.
+\end{itemize}
+
+\subsection{Lista de Componentes: Documentos }
+\begin{itemize}
+  \item \textbf{Contratos:} Informações sobre os serviços contratados, prazos e valores.
+  \item \textbf{Manuais de Operação:} Instruções para o uso dos equipamentos e software do estúdio.
+  \item \textbf{Guias de Procedimentos:} Procedimentos técnicos e criativos para execução dos projetos.
+  \item \textbf{Feedback de Clientes:} Documentos com feedback e revisões solicitadas pelos clientes.
+\end{itemize}
+
+\subsection{Componente: Metodologias ou Procedimentos}
+\begin{itemize}
+  \item \textbf{Processo de Filmagem e Edição:} Definição do fluxo de trabalho para gravação, edição e entrega de projetos, com etapas claramente definidas.
+  \item \textbf{Metodologia de Feedback:} Processo para coleta e implementação de feedback dos clientes através do site.
+  \item \textbf{Procedimentos de Backup:} Rotinas de backup automático de projetos no Data Center para garantir segurança de dados.
+\end{itemize}
+
+\subsection{Outros Componentes}
+
+\subsubsection{Mobilidade}
+\begin{itemize}
+    \item Acesso remoto para clientes acessarem o sistema de feedback via site em qualquer dispositivo conectado à internet.
+    \item Equipamentos como notebooks e câmeras móveis para gravações externas.
+\end{itemize}
+
+\subsubsection{Nuvem}
+\begin{itemize}
+    \item Armazenamento em nuvem para backup adicional de grandes arquivos de vídeo e projetos finalizados.
+    \item Colaboração em tempo real: Clientes e editores podem acessar projetos e colaborar remotamente usando plataformas de nuvem.
+\end{itemize}

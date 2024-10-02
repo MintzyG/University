@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.0 (9/2/15) 
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+% 
+% License:  
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%  Adaptado por Prof. Ausberto Castro Vera, UENF-CCT-LCMAT-CC 
+%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+\title{Projetos de Desenvolvimento}
+\author{Dr. Ausberto S. Castro Vera}
+
+
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=12cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0)
+        {\includegraphics[width=\paperwidth]{capa.png}}; %Capa Imagem A4 21x29.7
+\draw[anchor=north] (midpoint) node [fill=azulao!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]
+          {\paperwidth}
+          {\centering Sistema de Estudio de Filmagem e Edição\\[10pt] % Titulo Livro
+          {\huge\it Eric Hoffmann Fernandes Braga - Ausberto Castro Vera}\\[10pt]
+          {\large UENF - CCT - LCMAT - CC}\\[10pt]
+          {\large \today}
+          }
+        }; % Titulo - Autor
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2017-\the\year{} Ausberto S. Castro Vera e Aluno Fulano de Tal \\ % Copyright notice
+
+\noindent \textsc{UENF - Universidade Estadual do Norte Fluminense Darcy Ribeiro}\\ % Universidade
+
+\noindent \textsc{CCT - Centro de Ci\^{e}ncia e Tecnologia}\\ % Centro
+\noindent \textsc{LCMAT - Laborat\'{o}rio de Matem\'{a}ticas}\\ % Laboratorio
+\noindent \textsc{CC - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o}\\ % Curso
+
+%\input{autor.tex} \\
+
+%\noindent \textit{Primeira edi\c{c}\~{a}o, Fevereiro, 2017} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{sumario.jpg} % Table of contents heading image
+
+%\pagestyle{empty} % No headers
+
+\addtocontents{toc}{\protect{\pdfbookmark[0]{\contentsname}{toc}}}
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+%\part{Part One}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTERS
+%----------------------------------------------------------------------------------------
+
+%%%-------------- valido somente para o segundo itemize ------------------
+\newenvironment{citemize}{
+      \renewcommand{\labelitemii}{$\circ$}
+      \begin{itemize}}{\end{itemize}}
+
+\newpage \pagenumbering{arabic}
+
+\input 01introduc.tex
+\input 02Planejamento.tex
+\input 03Analise.tex
+\input 04Projeto.tex
+\input conclusao.tex
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\chapter*{Bibliografia}
+%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliografia}}
+
+
+
+\chapterimage{referencias.png} % Chapter heading image
+\bibliographystyle{alpha}
+\bibliography{APS}  %%
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliografia}}
+
+
+\end{document}
+

@@ -1,0 +1,25 @@
+# Fdb version 4
+["pdflatex"] 1725263923.4511 "2024EricHoffmann-EstudioDeCinema.tex" "2024EricHoffmann-EstudioDeCinema.pdf" "2024EricHoffmann-EstudioDeCinema" 1725263923.61954 2
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/fonts/map/fontname/texfonts.map" 1 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/fonts/tfm/public/cm/cmr10.tfm" 1 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/amscls/amsthm.sty" 1 12594 0d51ac3a545aaaa555021326ff22a6cc ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/amsfonts/amsfonts.sty" 1 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/amsmath/amsbsy.sty" 1 2222 499d61426192c39efd8f410ee1a52b9c ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/amsmath/amsgen.sty" 1 4173 82ac04dfb1256038fad068287fbb4fe6 ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/amsmath/amsmath.sty" 1 88371 d84032c0f422c3d1e282266c01bef237 ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/amsmath/amsopn.sty" 1 4474 b811654f4bf125f11506d13d13647efb ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/amsmath/amstext.sty" 1 2444 0d0c1ee65478277e8015d65b86983da2 ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/base/bk11.clo" 1 8303 10ecfb78537c1382ab0edd25f1521803 ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/base/book.cls" 1 23268 80674e17dbdc75804bd4d067e837600a ""
+  "/nix/store/9i0imi24c583wk5jmzydyyi6rcn4p81a-texlive-combined-medium-2023-final-texmfdist/tex/latex/base/fleqn.clo" 1 4807 4a9ac821b9dc64f850693df4c0259635 ""
+  "/nix/store/zkyfazaq0higq59l4gs46rlnj04l08xm-texlive-combined-medium-2023-final/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 8021568 13d36f14c9d35d77af00a048bebbfdf8 ""
+  "/nix/store/zkyfazaq0higq59l4gs46rlnj04l08xm-texlive-combined-medium-2023-final/share/texmf-var/web2c/texmf.cnf" 1 43219 835630867f9d5bfcce64abd2cb9e8bd1 ""
+  "2024EricHoffmann-EstudioDeCinema.aux" 1724989689.69938 16090 1f56cc2ca95663577adeba4623574a02 "pdflatex"
+  "2024EricHoffmann-EstudioDeCinema.tex" 1724376519.7591 4723 af0340da908ddc96bd7a0e64c6c165a2 ""
+  "here.sty" 0 -1 0 ""
+  "structure.tex" 1724376063.43923 24360 0c1f316bdbba2aca991cac8f5b7f9c58 ""
+  (generated)
+  "2024EricHoffmann-EstudioDeCinema.aux"
+  "2024EricHoffmann-EstudioDeCinema.log"
+  "2024EricHoffmann-EstudioDeCinema.pdf"
+  (rewritten before read)

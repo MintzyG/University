@@ -1,0 +1,145 @@
+\babel@toc {brazil}{}\relax 
+{\pdfbookmark [0]{Sum\'ario}{toc}}
+\contentsline {chapter}{\numberline {1}Introdu\c {c}\~{a}o}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Visão Geral do Sistema}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Central de Edição}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Centro de filmagem}{1}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Centro de Motion Capture}{2}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Centro de Scanning}{2}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Data Center}{2}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Servidor Interno}{2}{subsection.1.1.6}%
+\contentsline {section}{\numberline {1.2}Lista de componentes}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Lista de Componentes: Hardware}{3}{subsection.1.2.1}%
+\contentsline {subsubsection}{Estações de Edição}{3}{section*.2}%
+\contentsline {subsubsection}{Servidores de Armazenamento}{3}{section*.3}%
+\contentsline {subsubsection}{Equipamentos de Motion Capture}{3}{section*.4}%
+\contentsline {subsubsection}{Equipamentos de Scanning 3D}{3}{section*.5}%
+\contentsline {subsubsection}{Notebooks para Visualização}{3}{section*.6}%
+\contentsline {subsubsection}{Monitores e Sistema de Som}{3}{section*.7}%
+\contentsline {subsubsection}{Tela Infinita de LED}{3}{section*.8}%
+\contentsline {subsection}{\numberline {1.2.2}Câmeras Virtuais}{3}{subsection.1.2.2}%
+\contentsline {subsubsection}{Equipamento de Som}{3}{section*.9}%
+\contentsline {subsection}{\numberline {1.2.3}Computadores na Sala de Gravação}{4}{subsection.1.2.3}%
+\contentsline {subsubsection}{Computador de Linha}{4}{section*.10}%
+\contentsline {subsubsection}{Computador Auxiliar}{4}{section*.11}%
+\contentsline {subsection}{\numberline {1.2.4}Computadores no Centro de Motion Capture}{4}{subsection.1.2.4}%
+\contentsline {subsubsection}{Computador de Linha}{4}{section*.12}%
+\contentsline {subsubsection}{Computador Auxiliar}{4}{section*.13}%
+\contentsline {subsection}{\numberline {1.2.5}Computadores no Centro de Scanning}{4}{subsection.1.2.5}%
+\contentsline {subsubsection}{Computador de Linha}{4}{section*.14}%
+\contentsline {subsubsection}{Computador Auxiliar}{4}{section*.15}%
+\contentsline {subsection}{\numberline {1.2.6}Lista de Componentes: Software}{4}{subsection.1.2.6}%
+\contentsline {subsubsection}{Software de Edição}{4}{section*.16}%
+\contentsline {subsubsection}{Software de Motion Capture}{4}{section*.17}%
+\contentsline {subsubsection}{Software de Scanning 3D}{4}{section*.18}%
+\contentsline {subsubsection}{Sistema de Gerenciamento de Projetos}{4}{section*.19}%
+\contentsline {subsubsection}{Sistema de Streaming de Arquivos}{4}{section*.20}%
+\contentsline {subsection}{\numberline {1.2.7}Lista de Componentes: Banco de Dados}{5}{subsection.1.2.7}%
+\contentsline {subsubsection}{Banco de Dados de Projetos Ativos}{5}{section*.21}%
+\contentsline {subsubsection}{Banco de Dados de Backup}{5}{section*.22}%
+\contentsline {subsubsection}{Banco de Dados do Site}{5}{section*.23}%
+\contentsline {subsection}{\numberline {1.2.8}Lista de Componentes: Pessoas}{5}{subsection.1.2.8}%
+\contentsline {subsection}{\numberline {1.2.9}Lista de Componentes: Documentos }{5}{subsection.1.2.9}%
+\contentsline {subsection}{\numberline {1.2.10}Componente: Metodologias ou Procedimentos}{5}{subsection.1.2.10}%
+\contentsline {subsection}{\numberline {1.2.11}Outros Componentes}{5}{subsection.1.2.11}%
+\contentsline {subsubsection}{Mobilidade}{5}{section*.24}%
+\contentsline {subsubsection}{Nuvem}{6}{section*.25}%
+\contentsline {chapter}{\numberline {2}Etapa de Planejamento}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Solicitação do Sistema}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Necessidade de Negócio}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Requisitos de Negócio}{8}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Vantagens que o Sistema trará para a Organização}{8}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Restrições}{9}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Custos: Desenvolvimento e Operacional}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Benefícios}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Benefícios Tangíveis}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Benefícios Intangíveis}{10}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Análise de custos e benefícios}{10}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Investimentos Necessários}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Impacto dos Patrocínios e Parcerias}{10}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Benefícios Esperados}{11}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Estudo de Viabilidade}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Viabilidade Técnica}{11}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Viabilidade Organizacional}{11}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Viabilidade Econômica}{12}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Calendário}{12}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Cronograma}{12}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}Alternativas Tecnológicas}{14}{subsection.2.5.6}%
+\contentsline {subsubsection}{Software}{14}{section*.26}%
+\contentsline {paragraph}{Software de Edição}{14}{section*.27}%
+\contentsline {paragraph}{Software de Motion Capture}{14}{section*.28}%
+\contentsline {paragraph}{Software de Scanning 3D}{14}{section*.29}%
+\contentsline {paragraph}{Sistema de Gerenciamento de Projetos}{14}{section*.30}%
+\contentsline {paragraph}{Sistema de Streaming de Arquivos}{14}{section*.31}%
+\contentsline {subsection}{\numberline {2.5.7}Orçamento Estimado}{14}{subsection.2.5.7}%
+\contentsline {subsubsection}{Hardware}{14}{section*.32}%
+\contentsline {subsubsection}{Computadores}{15}{section*.33}%
+\contentsline {subsubsection}{Software}{15}{section*.34}%
+\contentsline {subsubsection}{Banco de Dados}{16}{section*.35}%
+\contentsline {subsubsection}{Total Estimado do Orçamento}{16}{section*.36}%
+\contentsline {subsection}{\numberline {2.5.8}Resumo e Recomendações}{16}{subsection.2.5.8}%
+\contentsline {chapter}{\numberline {3}Etapa de Análise}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Requisitos do Sistema}{17}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Requisitos Funcionais}{17}{subsection.3.1.1}%
+\contentsline {subsubsection}{Hardware}{17}{section*.37}%
+\contentsline {subsubsection}{Software}{18}{section*.38}%
+\contentsline {subsubsection}{Banco de Dados}{18}{section*.39}%
+\contentsline {subsubsection}{Pessoas}{19}{section*.40}%
+\contentsline {subsubsection}{Mobilidade}{19}{section*.41}%
+\contentsline {subsubsection}{Documentos}{19}{section*.42}%
+\contentsline {subsubsection}{Metodologia}{20}{section*.43}%
+\contentsline {subsubsection}{Nuvem}{20}{section*.44}%
+\contentsline {subsubsection}{Servidor}{21}{section*.45}%
+\contentsline {subsection}{\numberline {3.1.2}Definição dos Requisitos}{21}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Especificação de Requisitos}{24}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Stakeholders}{25}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Diretores de Filmagem}{25}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Produtores}{25}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Editores de Vídeo}{25}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Técnicos de Motion Capture}{26}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Equipe de Suporte Técnico}{26}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Atores de Motion Capture}{26}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Clientes (Produtoras Externas)}{27}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Equipe de TI}{27}{subsection.3.2.8}%
+\contentsline {subsection}{\numberline {3.2.9}Equipe de Som}{27}{subsection.3.2.9}%
+\contentsline {subsection}{\numberline {3.2.10}Consultores Externos}{27}{subsection.3.2.10}%
+\contentsline {section}{\numberline {3.3}Pontos de Vista e Serviços}{28}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Ponto de Vista dos Diretores de Filmagem}{28}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Ponto de Vista dos Produtores}{28}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Ponto de Vista dos Editores de Vídeo}{28}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Ponto de Vista dos Técnicos de Motion Capture}{29}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Ponto de Vista dos Clientes (Produtoras Externas)}{29}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Ponto de Vista da Equipe de TI}{30}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Entrevista}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Etapas de uma Entrevista}{31}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Lista de Stakeholders a Serem Entrevistados}{31}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Lista de Possíveis Perguntas para Cada Entrevistado}{31}{subsection.3.4.3}%
+\contentsline {subsubsection}{Diretor de Filmagem}{31}{section*.46}%
+\contentsline {subsubsection}{Produtor}{32}{section*.47}%
+\contentsline {subsubsection}{Editor de Vídeo}{32}{section*.48}%
+\contentsline {subsubsection}{Técnico de Motion Capture}{32}{section*.49}%
+\contentsline {subsubsection}{Equipe de TI}{32}{section*.50}%
+\contentsline {subsubsection}{Equipe de Suporte Técnico}{32}{section*.51}%
+\contentsline {subsection}{\numberline {3.4.4}Lista de Requisitos Possíveis Obtidos na Entrevista}{33}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Relatório das Entrevistas}{33}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}Casos de Uso}{33}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Caso de Uso 1: Controle de Câmeras Virtuais e Pré-visualização}{33}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Caso de Uso 2: Edição e Renderização de Vídeos}{34}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Caso de Uso 3: Gerenciamento de Projetos}{34}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Modelagem do Sistema}{35}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Modelagem de Processos}{35}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Modelagem de Dados}{35}{subsection.3.6.2}%
+\contentsline {chapter}{\numberline {4}Projeto do Sistema}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Estrat\'{e}gia do Projeto - Exemplos}{37}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Exemplo 1 Sistema pronto- ABC}{37}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Exemplo 2 Sistema Terceirizado- XYZ}{37}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Exemplo 3 Sistema Desenvolvido - MNP}{37}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Refinamento dos Diagramas DFD e E-R}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Arquitetura do Sistema - Estilos}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Arquitetura do Sistema}{38}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Arquitetura do Hardware}{38}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Arquitetura de Software}{38}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Projeto de Interface}{38}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Considera\c {c}\~{o}es Finais}{39}{chapter.5}%
+\contentsline {chapter}{\textcolor {ocre}{Bibliografia}}{41}{chapter*.52}%
+\contentsfinish 
