@@ -1,0 +1,10 @@
+.macro INIT()
+    GET_INPUT_INIT()
+    ALPHABET_MAPPING(s0)
+    GET_INPUT_INIT()
+    ALPHABET_MAPPING(s0)
+    GET_INPUT_INIT()
+    ALPHABET_MAPPING(s0)
+    SET_NEW_CELL()
+    SET_NEW_CELL()
+.end_macro
