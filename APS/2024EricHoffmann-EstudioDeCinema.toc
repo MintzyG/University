@@ -125,10 +125,10 @@
 \contentsline {section}{\numberline {3.5}Casos de Uso}{33}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Caso de Uso 1: Controle de Câmeras Virtuais e Pré-visualização}{33}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Caso de Uso 2: Edição e Renderização de Vídeos}{34}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Caso de Uso 3: Gerenciamento de Projetos}{34}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Modelagem do Sistema}{35}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Modelagem de Processos}{35}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Modelagem de Dados}{35}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.5.3}Caso de Uso 3: Gerenciamento de Projetos}{35}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Modelagem do Sistema}{36}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Modelagem de Processos}{36}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Modelagem de Dados}{36}{subsection.3.6.2}%
 \contentsline {chapter}{\numberline {4}Projeto do Sistema}{37}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Estrat\'{e}gia do Projeto - Exemplos}{37}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Exemplo 1 Sistema pronto- ABC}{37}{subsection.4.1.1}%
