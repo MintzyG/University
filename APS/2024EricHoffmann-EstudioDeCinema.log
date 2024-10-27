@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/nixos.org) (preloaded format=pdflatex 1980.1.1)  22 OCT 2024 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/nixos.org) (preloaded format=pdflatex 1980.1.1)  23 OCT 2024 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1744,24 +1744,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
 [33]
-<Pictures/led.jpeg, id=786, 1026.83624pt x 471.7625pt>
-File: Pictures/led.jpeg Graphic file (type jpg)
-<use Pictures/led.jpeg>
-Package pdftex.def Info: Pictures/led.jpeg  used on input line 652.
-(pdftex.def)             Requested size: 341.43437pt x 156.86266pt.
- [34 <./Pictures/led.jpeg>]
-<Pictures/Editor.jpeg, id=804, 1171.37625pt x 443.6575pt>
-File: Pictures/Editor.jpeg Graphic file (type jpg)
-<use Pictures/Editor.jpeg>
-Package pdftex.def Info: Pictures/Editor.jpeg  used on input line 683.
-(pdftex.def)             Requested size: 341.43437pt x 129.3208pt.
-<Pictures/Produtor.jpeg, id=805, 1219.55624pt x 450.68375pt>
-File: Pictures/Produtor.jpeg Graphic file (type jpg)
-<use Pictures/Produtor.jpeg>
-Package pdftex.def Info: Pictures/Produtor.jpeg  used on input line 715.
-(pdftex.def)             Requested size: 341.43437pt x 126.17682pt.
- [35 <./Pictures/editor.jpeg> <./Pictures/Produtor.jpeg>]) (./04Projeto.tex [36
-]
+<Pictures/Diretor.jpg, id=786, 998.73125pt x 569.12625pt>
+File: Pictures/Diretor.jpg Graphic file (type jpg)
+<use Pictures/Diretor.jpg>
+Package pdftex.def Info: Pictures/Diretor.jpg  used on input line 652.
+(pdftex.def)             Requested size: 341.43437pt x 194.55983pt.
+ [34 <./Pictures/Diretor.jpg>]
+<Pictures/Editor.jpg, id=803, 701.62125pt x 467.7475pt>
+File: Pictures/Editor.jpg Graphic file (type jpg)
+<use Pictures/Editor.jpg>
+Package pdftex.def Info: Pictures/Editor.jpg  used on input line 683.
+(pdftex.def)             Requested size: 341.43437pt x 227.62807pt.
+<Pictures/Produtor.jpg, id=804, 785.93625pt x 514.92375pt>
+File: Pictures/Produtor.jpg Graphic file (type jpg)
+<use Pictures/Produtor.jpg>
+Package pdftex.def Info: Pictures/Produtor.jpg  used on input line 715.
+(pdftex.def)             Requested size: 341.43437pt x 223.69931pt.
+ [35 <./Pictures/Editor.jpg>])
+(./04Projeto.tex [36 <./Pictures/Produtor.jpg>]
 Cap\'{\i }tulo 4.
 <Pictures/projeto.png, id=822, 289.08pt x 112.7412pt>
 File: Pictures/projeto.png Graphic file (type png)
@@ -1818,10 +1818,10 @@ t changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34835 strings out of 474116
- 712337 string characters out of 5720541
+ 34823 strings out of 474116
+ 712181 string characters out of 5720541
  1955187 words of memory out of 5000000
- 55693 multiletter control sequences out of 15000+600000
+ 55681 multiletter control sequences out of 15000+600000
  649258 words of font info for 374 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,13n,96p,1121b,1165s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1832,7 +1832,7 @@ ir75iwgnkrsq1dximagxlx8j7-texlive-2023-env-texmfdist/fonts/type1/urw/times/utmb
 8a.pfb></nix/store/d80likrir75iwgnkrsq1dximagxlx8j7-texlive-2023-env-texmfdist/
 fonts/type1/urw/times/utmr8a.pfb></nix/store/d80likrir75iwgnkrsq1dximagxlx8j7-t
 exlive-2023-env-texmfdist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 2024EricHoffmann-EstudioDeCinema.pdf (47 pages, 6586995 bytes
+Output written on 2024EricHoffmann-EstudioDeCinema.pdf (47 pages, 6525206 bytes
 ).
 PDF statistics:
  1253 PDF objects out of 1440 (max. 8388607)
