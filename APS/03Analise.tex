@@ -625,115 +625,130 @@ No geral, as entrevistas ajudaram a consolidar a visão de que o sistema precisa
 Nesta seção, são apresentados os principais casos de uso do sistema de estúdio de filmagem e edição da \textbf{Corridor Digital}. Os casos de uso descrevem as interações entre os usuários (atores) e o sistema, detalhando as funcionalidades principais e os fluxos de trabalho essenciais. A seguir, estão descritos três casos de uso críticos para o funcionamento do estúdio: controle de câmeras virtuais, edição e renderização de vídeos, e gerenciamento de projetos.
 
 \subsection{Caso de Uso 1: Controle de Câmeras Virtuais e Pré-visualização}
-
-\textbf{Descrição:} O diretor de filmagem utiliza o sistema para controlar câmeras virtuais durante as filmagens e visualizar, em tempo real, os cenários gerados pela tela infinita de LED. Ele pode ajustar os ângulos das câmeras e coordenar as filmagens com a captura de movimento e renderização de cenários virtuais.
-
-\begin{itemize}
-  \item \textbf{Ator Principal:} Diretor de Filmagem
-  \item \textbf{Atores Secundários:} Técnico de Motion Capture, Equipe de TI
-  \item \textbf{Fluxo Principal:}
+\begin{description}[style=nextline]
+    \item[Descrição:] Este caso de uso permite que os diretores e produtores controlem câmeras virtuais e pré-visualizem cenas em tempo real durante as gravações. Através dos notebooks touch, eles podem modificar a cena virtual e testar diferentes ângulos e configurações.
+    
+    \item[Atores:] Produtores, Diretores.
+    
+    \item[Pré-condição:] A câmera virtual e a tela infinita de LED estão configuradas e conectadas ao servidor central.
+    
+    \item[Sequência de Ações:]
     \begin{enumerate}
-      \item O diretor de filmagem acessa o sistema de controle de câmeras virtuais.
-      \item Ele seleciona a câmera virtual desejada e ajusta seu ângulo de visão.
-      \item O diretor solicita a pré-visualização do cenário virtual em tempo real, utilizando a tela de LED.
-      \item O sistema renderiza o cenário em tempo real, integrando os dados de captura de movimento.
-      \item O diretor aprova ou ajusta as configurações conforme necessário.
+        \item Iniciar o sistema de controle de câmeras virtuais.
+        \item Configurar a cena virtual e os objetos de pré-visualização.
+        \item Ajustar a posição e o ângulo da câmera virtual.
+        \item Visualizar a cena em tempo real.
+        \item Fazer modificações conforme necessário.
     \end{enumerate}
-  \item \textbf{Requisitos Satisfeitos:}
-    \begin{itemize}
-      \item Controle de câmeras virtuais com ajustes em tempo real.
-      \item Pré-visualização em tempo real dos cenários virtuais.
-      \item Integração com captura de movimento e renderização de cenas.
-    \end{itemize}
-\end{itemize}
+    
+    \item[Pós-condição:] A cena ajustada está pronta para gravação ou edição posterior.
+\end{description}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{Diretor}
-    \caption{Diagrama de Interação Diretor Sistema}
+    \includegraphics[width=0.8\textwidth]{Cameras}
+    \caption{Diagrama de Interação Diretor com Sistema de cameras}
     \label{fig:diagram1}
 \end{figure}
 
 \subsection{Caso de Uso 2: Edição e Renderização de Vídeos}
-
-\textbf{Descrição:} Os editores de vídeo utilizam o sistema para acessar os arquivos de vídeo capturados, realizar edições e renderizar o conteúdo final em alta definição. O sistema deve suportar a renderização em tempo real de efeitos visuais e a colaboração simultânea entre múltiplos editores.
-
-\begin{itemize}
-  \item \textbf{Ator Principal:} Editor de Vídeo
-  \item \textbf{Atores Secundários:} Diretor de Filmagem
-  \item \textbf{Fluxo Principal:}
+\begin{description}[style=nextline]
+    \item[Descrição:] Os editores utilizam este caso de uso para editar, ajustar efeitos visuais e renderizar vídeos usando os computadores de alta performance conectados ao servidor central. Os arquivos grandes são transmitidos diretamente do servidor para facilitar o trabalho.
+    
+    \item[Atores:] Editores de vídeo.
+    
+    \item[Pré-condição:] Os arquivos de vídeo e efeitos visuais estão disponíveis no servidor central.
+    
+    \item[Sequência de Ações:]
     \begin{enumerate}
-      \item O editor acessa o sistema e faz login em sua estação de trabalho.
-      \item Ele seleciona os arquivos de vídeo armazenados no servidor central.
-      \item O editor começa a trabalhar na edição do vídeo, aplicando cortes, efeitos visuais e animações.
-      \item O sistema renderiza os efeitos aplicados em tempo real.
-      \item O editor salva o progresso e compartilha a versão com a equipe para feedback.
-      \item O vídeo final é renderizado e armazenado no servidor central.
+        \item Acessar o sistema de edição.
+        \item Carregar os arquivos de vídeo e efeitos necessários.
+        \item Realizar a edição, incluindo cortes, ajustes e aplicação de efeitos.
+        \item Iniciar a renderização do vídeo.
+        \item Salvar o vídeo finalizado no servidor central.
     \end{enumerate}
-  \item \textbf{Requisitos Satisfeitos:}
-    \begin{itemize}
-      \item Acesso rápido a arquivos de vídeo no servidor central.
-      \item Ferramentas de edição e renderização em tempo real.
-      \item Colaboração entre editores em tempo real.
-    \end{itemize}
-\end{itemize}
+    
+    \item[Pós-condição:] O vídeo final está pronto para ser enviado ao cliente ou arquivado.
+\end{description}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{Editor}
+    \includegraphics[width=0.8\textwidth]{Editores}
     \caption{Diagrama de Interação Editor Sistema}
     \label{fig:diagram1}
 \end{figure}
 
 \subsection{Caso de Uso 3: Gerenciamento de Projetos}
-
-\textbf{Descrição:} Os produtores utilizam o sistema para criar, gerenciar e acompanhar os projetos de filmagem e edição. Eles definem cronogramas, alocam recursos e monitoram o progresso das equipes. O sistema permite a geração de relatórios de progresso e notificações automáticas para os envolvidos no projeto.
-
-\begin{itemize}
-  \item \textbf{Ator Principal:} Produtor
-  \item \textbf{Atores Secundários:} Diretor de Filmagem, Editor de Vídeo
-  \item \textbf{Fluxo Principal:}
+\begin{description}[style=nextline]
+    \item[Descrição:] Este caso de uso permite o controle e acompanhamento de projetos no sistema. O cliente pode acessar um site interno para ver o progresso do projeto, dar feedback, e visualizar atualizações diretamente.
+    
+    \item[Atores:] Gerente de Projetos, Cliente.
+    
+    \item[Pré-condição:] O projeto está registrado no sistema com acesso disponível para o cliente.
+    
+    \item[Sequência de Ações:]
     \begin{enumerate}
-      \item O produtor acessa o sistema de gerenciamento de projetos.
-      \item Ele cria um novo projeto e define o cronograma e os recursos necessários.
-      \item O sistema aloca os recursos e notifica as equipes envolvidas.
-      \item O produtor acompanha o progresso de cada fase do projeto através de relatórios automáticos.
-      \item O sistema envia notificações automáticas para os envolvidos sobre prazos e mudanças no cronograma.
-      \item O produtor aprova as etapas concluídas e solicita revisões quando necessário.
+        \item O gerente de projetos atualiza o status do projeto no sistema.
+        \item O cliente acessa o site interno para verificar o andamento do projeto.
+        \item O cliente visualiza o progresso, dá feedback e faz marcações se necessário.
+        \item O gerente de projetos visualiza o feedback e atualiza o projeto conforme solicitado.
     \end{enumerate}
-  \item \textbf{Requisitos Satisfeitos:}
-    \begin{itemize}
-      \item Criação e gerenciamento de projetos com cronogramas e alocação de recursos.
-      \item Relatórios automáticos de progresso e notificações para equipes.
-      \item Aprovação e acompanhamento de etapas do projeto.
-    \end{itemize}
-\end{itemize}
-
+    
+    \item[Pós-condição:] O projeto é atualizado de acordo com o feedback do cliente e segue para as próximas etapas.
+\end{description}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{Produtor}
-    \caption{Diagrama de Interação Produtor Sistema}
+    \includegraphics[width=0.8\textwidth]{Clientes}
+    \caption{Diagrama de Interação Cliente/Gerente Sistema}
     \label{fig:diagram1}
 \end{figure}
 
+\pagebreak
+\newpage
+
 \section{Modelagem do Sistema}
 
+Esta seção descreve a modelagem do sistema, incluindo a estruturação de dados e os processos principais. A modelagem de dados representa a estrutura e o armazenamento de informações, enquanto a modelagem de processos detalha o fluxo de dados e operações nos subsistemas principais.
 
-\subsection{Modelagem de Processos}
-
-Explicar detalhadamente cada diagrama: cada processo, dados de entrada e dados de sa\'{\i}da dos processos
+\subsection{Modelagem de Processos: Subsistema de Edicao e Renderizacao de Videos}
+O subsistema de edição e renderização lida com a aplicação de efeitos e o processamento dos vídeos. Ele permite que editores carreguem e modifiquem arquivos de vídeo.
 
 \begin{itemize}
-  \item Diagrama de Contexto
-
-  \item Subsistema XYK
-
-  \item Subsistema XYK-ABC
-
+    \item \textbf{Dados de Entrada}: Arquivos de vídeo brutos, configurações de efeitos visuais.
+    \item \textbf{Processos}:
+        \begin{itemize}
+            \item \textbf{Aplicar Efeitos}: O editor aplica efeitos visuais, com as configurações sendo carregadas e aplicadas ao vídeo.
+            \item \textbf{Renderizacao de Video}: Após os efeitos, o vídeo é renderizado e salvo no servidor.
+        \end{itemize}
+    \item \textbf{Dados de Saída}: Vídeo finalizado, pronto para visualização ou download.
 \end{itemize}
 
+\subsection{Modelagem de Processos: Subsistema de Gerenciamento de Feedback e Progresso}
+O subsistema de gerenciamento de feedback e progresso armazena as atualizações de projetos e feedbacks dos clientes, permitindo o acompanhamento contínuo dos editores.
 
+\begin{itemize}
+    \item \textbf{Dados de Entrada}: Atualizações do gerente de projetos, feedback do cliente.
+    \item \textbf{Processos}:
+        \begin{itemize}
+            \item \textbf{Atualizacao de Progresso do Projeto}: O gerente atualiza o status do projeto, que é salvo no banco de dados.
+            \item \textbf{Registro de Feedback do Cliente}: Clientes fornecem feedback sobre os vídeos, o qual é armazenado.
+        \end{itemize}
+    \item \textbf{Dados de Saída}: Relatórios de progresso e feedback do cliente.
+\end{itemize}
+
+\subsection{Modelagem de Processos: Subsistema de Gerenciamento de Recursos de Projeto}
+Este subsistema gerencia os arquivos e recursos do projeto, organizando e armazenando arquivos multimídia e dados relacionados ao projeto.
+
+\begin{itemize}
+    \item \textbf{Dados de Entrada}: Arquivos de mídia brutos, metadados do projeto.
+    \item \textbf{Processos}:
+        \begin{itemize}
+            \item \textbf{Armazenamento de Arquivos}: Os arquivos carregados são armazenados no sistema de arquivos e referenciados na base de dados.
+            \item \textbf{Catalogacao de Recursos}: Os metadados dos recursos são organizados e catalogados para facilitar o acesso durante o processo de edição.
+        \end{itemize}
+    \item \textbf{Dados de Saída}: Recursos organizados e prontos para uso nas etapas de edição e renderização.
+\end{itemize}
 
 \subsection{Modelagem de Dados}
 
