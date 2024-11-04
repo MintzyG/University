@@ -711,44 +711,75 @@ Nesta seção, são apresentados os principais casos de uso do sistema de estúd
 
 Esta seção descreve a modelagem do sistema, incluindo a estruturação de dados e os processos principais. A modelagem de dados representa a estrutura e o armazenamento de informações, enquanto a modelagem de processos detalha o fluxo de dados e operações nos subsistemas principais.
 
-\subsection{Modelagem de Processos: Subsistema de Edicao e Renderizacao de Videos}
-O subsistema de edição e renderização lida com a aplicação de efeitos e o processamento dos vídeos. Ele permite que editores carreguem e modifiquem arquivos de vídeo.
+\subsection{Modelagem de Processos: Subsistema Renderizacao de Cenas}
+O subsistema de renderização lida com a aplicação de efeitos e o processamento das cenas. Ele transforma o trabalho dos esditores na cena final disponivel para os clientes.
 
 \begin{itemize}
     \item \textbf{Dados de Entrada}: Arquivos de vídeo brutos, configurações de efeitos visuais.
     \item \textbf{Processos}:
         \begin{itemize}
-            \item \textbf{Aplicar Efeitos}: O editor aplica efeitos visuais, com as configurações sendo carregadas e aplicadas ao vídeo.
-            \item \textbf{Renderizacao de Video}: Após os efeitos, o vídeo é renderizado e salvo no servidor.
+            \item \textbf{Aplicar Efeitos}: O servidor aplica efeitos visuais, com as configurações configuradas pelos editores na edição.
+            \item \textbf{Renderizacao de Video}: Após os efeitos, a cena é renderizada e salva no servidor.
         \end{itemize}
-    \item \textbf{Dados de Saída}: Vídeo finalizado, pronto para visualização ou download.
+    \item \textbf{Dados de Saída}: Cena finalizada, pronta para visualização ou download.
 \end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Videos}
+    \caption{Diagrama de Processo de Renderizacao}
+    \label{fig:diagram1}
+\end{figure}
+
+\pagebreak
+\newpage
 
 \subsection{Modelagem de Processos: Subsistema de Gerenciamento de Feedback e Progresso}
-O subsistema de gerenciamento de feedback e progresso armazena as atualizações de projetos e feedbacks dos clientes, permitindo o acompanhamento contínuo dos editores.
+O subsistema de gerenciamento de feedback e progresso armazena as atualizações de projetos e feedbacks dos clientes, permitindo o acompanhamento contínuo.
 
 \begin{itemize}
-    \item \textbf{Dados de Entrada}: Atualizações do gerente de projetos, feedback do cliente.
+    \item \textbf{Dados de Entrada}: Atualizações de status de projeto, feedbacks dos clientes.
     \item \textbf{Processos}:
         \begin{itemize}
-            \item \textbf{Atualizacao de Progresso do Projeto}: O gerente atualiza o status do projeto, que é salvo no banco de dados.
-            \item \textbf{Registro de Feedback do Cliente}: Clientes fornecem feedback sobre os vídeos, o qual é armazenado.
+            \item \textbf{Armazenamento de feedback}: Feedbacks sobre os vídeos são coletados e armazenados.
+            \item \textbf{Atualização de Progresso do Projeto}: O status do projeto é atualizado e salvo no banco de dados.
         \end{itemize}
-    \item \textbf{Dados de Saída}: Relatórios de progresso e feedback do cliente.
+    \item \textbf{Dados de Saída}: Relatórios de progresso e feedbacks dos clientes.
 \end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Feedback}
+    \caption{Diagrama de Processo de Feedbacks e Progresso}
+    \label{fig:diagram1}
+\end{figure}
+
+\pagebreak
+\newpage
 
 \subsection{Modelagem de Processos: Subsistema de Gerenciamento de Recursos de Projeto}
-Este subsistema gerencia os arquivos e recursos do projeto, organizando e armazenando arquivos multimídia e dados relacionados ao projeto.
+Este subsistema gerencia os arquivos e recursos do projeto, organizando o tempo do time com base no que o cliente deseja pronto.
 
 \begin{itemize}
-    \item \textbf{Dados de Entrada}: Arquivos de mídia brutos, metadados do projeto.
+    \item \textbf{Dados de Entrada}: metadados do projeto, pedidos do cliente
     \item \textbf{Processos}:
         \begin{itemize}
-            \item \textbf{Armazenamento de Arquivos}: Os arquivos carregados são armazenados no sistema de arquivos e referenciados na base de dados.
-            \item \textbf{Catalogacao de Recursos}: Os metadados dos recursos são organizados e catalogados para facilitar o acesso durante o processo de edição.
+            \item \textbf{Planejamento de Recursos}: A alocação de recursos é calculada com base as necessidades do cliente
+            \item \textbf{Atualização do projeto}: O projeto é atualizado no banco para ter as novas datas e demandas salvas
+            \item \textbf{Notificação da Equipe}: A equipe é notificada de suas novas prioridades
         \end{itemize}
-    \item \textbf{Dados de Saída}: Recursos organizados e prontos para uso nas etapas de edição e renderização.
+    \item \textbf{Dados de Saída}: Relatório de recursos do projeto atualizado
 \end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Recursos}
+    \caption{Diagrama de Processo de Recursos}
+    \label{fig:diagram1}
+\end{figure}
+
+\pagebreak
+\newpage
 
 \subsection{Modelagem de Dados}
 
