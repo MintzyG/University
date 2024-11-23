@@ -4,7 +4,7 @@
 % Disciplina: An\'{a}lise e Projeto de Sistemas
 % Aluno: 
 
-\chapterimage{analise.png} % Table of contents heading image
+\chapterimage{ScalaH.jpg} % Table of contents heading image
 \chapter{Etapa de Análise}
 
 A etapa de análise é fundamental para o desenvolvimento de qualquer sistema, pois é nessa fase que são identificados os requisitos, as expectativas dos stakeholders, e os serviços que o sistema deve oferecer. Este capítulo descreve os principais componentes da análise para o sistema de estúdio de filmagem e edição da \textbf{Corridor Digital}. São discutidos os requisitos funcionais e não funcionais do sistema, os stakeholders envolvidos, os pontos de vista e os serviços oferecidos, além de entrevistas conduzidas para levantar as necessidades do projeto. Também são apresentados os casos de uso e a modelagem do sistema, assegurando que o desenvolvimento atenda às demandas técnicas e criativas do estúdio.
@@ -626,28 +626,25 @@ Nesta seção, são apresentados os principais casos de uso do sistema de estúd
 
 \subsection{Caso de Uso 1: Controle de Câmeras Virtuais e Pré-visualização}
 \begin{description}[style=nextline]
-    \item[Descrição:] Este caso de uso permite que os diretores e produtores controlem câmeras virtuais e pré-visualizem cenas em tempo real durante as gravações. Através dos notebooks touch, eles podem modificar a cena virtual e testar diferentes ângulos e configurações.
+    \item[Descrição:] Este caso de uso permite que os diretores e camera-man controlem câmeras virtuais durante as gravações. Também permite que diretores e produtores configurem as câmeras virtuais para cenas especificas.
     
-    \item[Atores:] Produtores, Diretores.
+    \item[Atores:] Produtores, Diretores, Camera Man.
     
     \item[Pré-condição:] A câmera virtual e a tela infinita de LED estão configuradas e conectadas ao servidor central.
     
-    \item[Sequência de Ações:]
+    \item[Ações:]
     \begin{enumerate}
-        \item Iniciar o sistema de controle de câmeras virtuais.
-        \item Configurar a cena virtual e os objetos de pré-visualização.
-        \item Ajustar a posição e o ângulo da câmera virtual.
-        \item Visualizar a cena em tempo real.
-        \item Fazer modificações conforme necessário.
+        \item Configurar a Camera
+        \item Criar Presets
+        \item Controlar Cameras Virtuais
     \end{enumerate}
     
-    \item[Pós-condição:] A cena ajustada está pronta para gravação ou edição posterior.
 \end{description}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{Cameras}
-    \caption{Diagrama de Interação Diretor com Sistema de cameras}
+    \caption{Diagrama de Sistema de cameras virtuais}
     \label{fig:diagram1}
 \end{figure}
 
@@ -655,20 +652,15 @@ Nesta seção, são apresentados os principais casos de uso do sistema de estúd
 \begin{description}[style=nextline]
     \item[Descrição:] Os editores utilizam este caso de uso para editar, ajustar efeitos visuais e renderizar vídeos usando os computadores de alta performance conectados ao servidor central. Os arquivos grandes são transmitidos diretamente do servidor para facilitar o trabalho.
     
-    \item[Atores:] Editores de vídeo.
+    \item[Atores:] Editores de vídeo, Produtores.
     
-    \item[Pré-condição:] Os arquivos de vídeo e efeitos visuais estão disponíveis no servidor central.
-    
-    \item[Sequência de Ações:]
+    \item[Ações:]
     \begin{enumerate}
-        \item Acessar o sistema de edição.
         \item Carregar os arquivos de vídeo e efeitos necessários.
         \item Realizar a edição, incluindo cortes, ajustes e aplicação de efeitos.
         \item Iniciar a renderização do vídeo.
-        \item Salvar o vídeo finalizado no servidor central.
+        \item Enviar Feedback para os editores
     \end{enumerate}
-    
-    \item[Pós-condição:] O vídeo final está pronto para ser enviado ao cliente ou arquivado.
 \end{description}
 
 \begin{figure}[ht]
