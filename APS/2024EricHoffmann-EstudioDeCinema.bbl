@@ -1,3 +1,24 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Dennis2014}
+Alan Dennis, Barbara~Haley Wixom, and Roberta~M. Roth.
+\newblock {\em An{\'a}lise e Projeto de Sistemas}.
+\newblock LTC, Rio de Janeiro, 5 edition, 2014.
+
+\bibitem{Satzinger2012}
+John~W. Satzinger, Robert~B. Jackson, and Stephen~D. Burd.
+\newblock {\em Introduction to Systems Analysis and Design: An Agile, Iterative
+  Approach}.
+\newblock Course Technology, CENGAGE Learning, Canad{\'a}, 6 edition, 2012.
+
+\bibitem{Shelly2012}
+Gary~B. Shelly and Harry~J. Rosenblat.
+\newblock {\em Analysis and Design for Systems}.
+\newblock Course Technology, CENGAGE Learning, Canad{\'a}, 9 edition, 2012.
+
+\bibitem{Sommerville2011}
+Ian Sommerville.
+\newblock {\em Engenharia de Software}.
+\newblock Pearson Prentice Hall, S{\~a}o Paulo, 9 edition, 2011.
 
 \end{thebibliography}

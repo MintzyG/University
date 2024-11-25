@@ -233,82 +233,366 @@ A etapa de análise é fundamental para o desenvolvimento de qualquer sistema, p
 
 \subsection{Definição dos Requisitos}
 
-\begin{enumerate}
-  \item Hardware - Câmeras virtuais: O sistema deve suportar a operação de câmeras virtuais de alta definição, permitindo a criação de movimentos de câmera complexos em ambientes 3D.
-  \item Hardware - Telas LED: O sistema deve permitir a integração com telas LED de alta resolução para cenários virtuais, possibilitando a criação de fundos interativos em tempo real.
-  \item Hardware - Captura de movimento: O sistema deve suportar a operação de equipamentos de captura de movimento, permitindo a transferência precisa de movimentos de atores para personagens digitais.
-  \item Hardware - Scanners 3D: O sistema deve permitir a integração com scanners 3D de alta precisão, facilitando a criação de modelos digitais detalhados de objetos e pessoas reais.
-  \item Hardware - GPUs de alto desempenho: O sistema deve suportar a operação de estações de trabalho com GPUs de alto desempenho, garantindo processamento rápido de efeitos visuais complexos e renderização em tempo real.
-  \item Hardware - Armazenamento de alta capacidade: O sistema deve permitir a integração com sistemas de armazenamento de alta capacidade, assegurando espaço suficiente para projetos de grande escala e footage em alta resolução.
-  \item Hardware - Áudio profissional: O sistema deve suportar a operação de equipamentos de áudio profissional, permitindo a captura, edição e mixagem de som de alta qualidade.
-  \item Hardware - Iluminação controlada por computador: O sistema deve permitir a integração com sistemas de iluminação controlados por computador, possibilitando ajustes precisos e automação de iluminação em sets virtuais.
-  \item Hardware - Monitores calibrados: O sistema deve suportar a operação de monitores de referência calibrados, garantindo consistência de cor em todo o fluxo de trabalho de pós-produção.
-  \item Hardware - Controle de câmera remota: O sistema deve permitir a integração com sistemas de controle de câmera remota, facilitando operações complexas de câmera em locações difíceis ou perigosas.
-  \item Hardware - Chroma key: O sistema deve suportar a operação de equipamentos de chroma key, permitindo a criação de efeitos de composição de alta qualidade.
-  \item Hardware - Motion control: O sistema deve permitir a integração com sistemas de motion control, possibilitando movimentos de câmera precisos e repetíveis para efeitos visuais complexos.
-  \item Software - Edição não-linear: O sistema deve permitir a edição não-linear de vídeo, oferecendo ferramentas avançadas para montagem, corte e transições.
-  \item Software - Efeitos visuais: O sistema deve suportar a composição de efeitos visuais, incluindo ferramentas para keying, tracking, e composição multicamada.
-  \item Software - Correção de cor: O sistema deve permitir a correção de cor avançada, incluindo ferramentas para gradação de cor, LUTs e ajustes seletivos.
-  \item Software - Animação 3D: O sistema deve suportar a animação 3D, oferecendo ferramentas para modelagem, rigging, animação e renderização de objetos e personagens tridimensionais.
-  \item Software - Motion graphics: O sistema deve permitir a criação de motion graphics, incluindo ferramentas para animação de texto, formas e efeitos visuais para títulos e gráficos animados.
-  \item Software - Edição de áudio: O sistema deve suportar a edição e mixagem de áudio, oferecendo ferramentas para edição multitrack, aplicação de efeitos e mixagem surround.
-  \item Software - Rastreamento de movimento: O sistema deve permitir o rastreamento de movimento em footage, possibilitando a integração precisa de elementos CGI em cenas filmadas.
-  \item Software - Rotoscopia: O sistema deve suportar a rotoscopia e mascaramento, oferecendo ferramentas precisas para isolamento de elementos em footage.
-  \item Software - Simulação de partículas: O sistema deve permitir a simulação de partículas e fluidos, possibilitando a criação de efeitos realistas de fogo, água, fumaça e outros fenômenos.
-  \item Software - Renderização 3D: O sistema deve suportar a renderização de cenas 3D complexas, incluindo iluminação global, oclusão ambiental e outros efeitos avançados.
-  \item Banco de Dados - Metadados: O sistema deve permitir o armazenamento de metadados de projetos, facilitando a organização e recuperação de informações relacionadas a cada produção.
-  \item Banco de Dados - Versionamento: O sistema deve suportar o versionamento de arquivos de projeto, permitindo o rastreamento de alterações e a reversão para versões anteriores quando necessário.
-  \item Banco de Dados - Rastreamento de alterações: O sistema deve permitir o rastreamento de alterações em arquivos, fornecendo um histórico detalhado de modificações para cada asset do projeto.
-  \item Banco de Dados - Catalogação de assets: O sistema deve suportar a catalogação de assets digitais, incluindo ferramentas para categorização, tagging e busca eficiente de elementos de projeto.
-  \item Banco de Dados - Pesquisa por palavras-chave: O sistema deve permitir a pesquisa rápida de conteúdo por palavras-chave, facilitando a localização de assets específicos em grandes bibliotecas de mídia.
-  \item Banco de Dados - Configurações de renderização: O sistema deve suportar o armazenamento de configurações de renderização, permitindo a reutilização e padronização de settings entre projetos.
-  \item Pessoas - Perfis de usuário: O sistema deve permitir a criação de perfis de usuário com diferentes níveis de acesso, garantindo segurança e controle apropriado sobre recursos e informações sensíveis.
-  \item Pessoas - Atribuição de tarefas: O sistema deve suportar a atribuição de tarefas a membros da equipe, facilitando a gestão de projetos e a distribuição eficiente de trabalho.
-  \item Pessoas - Rastreamento de progresso: O sistema deve permitir o rastreamento de progresso de tarefas individuais, fornecendo visibilidade sobre o status de cada elemento do projeto.
-  \item Pessoas - Comunicação interna: O sistema deve suportar a comunicação interna entre membros da equipe, oferecendo ferramentas para mensagens, comentários e colaboração em tempo real.
-  \item Pessoas - Avaliação de desempenho: O sistema deve permitir a avaliação de desempenho de membros da equipe, incluindo métricas de produtividade e qualidade do trabalho entregue.
-  \item Mobilidade - Acesso remoto: O sistema deve permitir o acesso remoto a projetos em andamento, possibilitando que membros da equipe trabalhem de diferentes locações.
-  \item Mobilidade - Visualização móvel: O sistema deve suportar a visualização de rushes em dispositivos móveis, permitindo revisões rápidas de footage em set ou em trânsito.
-  \item Mobilidade - Aprovação via app: O sistema deve permitir a aprovação de conteúdo via aplicativo móvel, agilizando o processo de revisão e feedback.
-  \item Mobilidade - Sincronização entre dispositivos: O sistema deve suportar a sincronização de arquivos entre dispositivos, garantindo que a versão mais recente do trabalho esteja sempre disponível em qualquer plataforma.
-  \item Documentos - Edição de roteiros: O sistema deve permitir a criação e edição de roteiros, incluindo ferramentas para formatação padrão da indústria e revisões colaborativas.
-  \item Documentos - Relatórios automáticos: O sistema deve suportar a geração automática de relatórios de progresso, fornecendo visões atualizadas sobre o status do projeto para stakeholders.
-  \item Documentos - Ordens do dia: O sistema deve permitir a criação de ordens do dia, facilitando o planejamento e comunicação de atividades diárias de produção.
-  \item Documentos - Listas de equipamentos: O sistema deve suportar a geração de listas de equipamentos, auxiliando na logística e preparação para filmagens e sessões de efeitos visuais.
-  \item Documentos - Contratos padronizados: O sistema deve permitir a criação de contratos padronizados, agilizando processos legais e administrativos relacionados à produção.
-  \item Metodologia - Planejamento ágil: O sistema deve suportar o planejamento de projetos usando metodologias ágeis, permitindo uma abordagem flexível e iterativa ao desenvolvimento de efeitos visuais.
-  \item Metodologia - Sprints: O sistema deve permitir a definição e rastreamento de sprints, facilitando a organização do trabalho em ciclos curtos e gerenciáveis.
-  \item Metodologia - Reuniões diárias: O sistema deve suportar a realização de reuniões diárias virtuais, promovendo comunicação regular e identificação precoce de problemas.
-  \item Nuvem - Armazenamento: O sistema deve permitir o armazenamento de projetos na nuvem, oferecendo acesso flexível e backup seguro de dados.
-  \item Nuvem - Renderização: O sistema deve suportar a renderização em nuvem de projetos complexos, permitindo o uso de recursos computacionais escaláveis conforme necessário.
-  \item Nuvem - Compartilhamento seguro: O sistema deve permitir o compartilhamento seguro de arquivos via nuvem, facilitando a colaboração com clientes e parceiros externos.
-  \item Servidor - Gerenciamento de usuários: O sistema deve permitir o gerenciamento centralizado de usuários e permissões, garantindo controle de acesso apropriado a recursos e dados sensíveis.
-  \item Servidor - Balanceamento de carga: O sistema deve suportar o balanceamento de carga entre múltiplos servidores, assegurando performance consistente mesmo durante picos de demanda.
+\subsubsection{Hardware}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Captura e Processamento de Imagens:} Sistema de câmeras virtuais capazes de capturar e processar imagens em alta definição (resolução mínima 4K), com capacidade de renderização em tempo real.
+    \item \textbf{Renderização Visual:} Infraestrutura de telas LED de alta resolução, com capacidade de renderizar cenários virtuais complexos, suportando taxa de atualização mínima de 120 Hz.
+    \item \textbf{Captura de Movimento:} Sistema de captura de movimento com precisão submilimétrica, capaz de registrar e processar dados em tempo real com latência inferior a 10 milissegundos.
+    \item \textbf{Digitalização 3D:} Scanners de alta precisão com resolução mínima de 0.1mm, capazes de capturar texturas e geometrias complexas de objetos e ambientes.
+    \item \textbf{Processamento Gráfico:} GPUs de alto desempenho com capacidade mínima de 24GB de memória, suportando renderizações paralelas e computação de alta complexidade.
+    \item \textbf{Armazenamento de Dados:} Sistema de armazenamento distribuído com capacidade mínima de 500TB, suportando transferências de alta velocidade e redundância de dados.
+    \item \textbf{Processamento de Áudio:} Infraestrutura de áudio profissional capaz de processar e mixar simultaneamente até 128 canais de áudio com qualidade de estúdio.
+    \item \textbf{Controle de Iluminação:} Sistemas de iluminação computadorizados com capacidade de controle preciso, suportando mais de 1000 canais individuais e sincronização em tempo real.
 \end{enumerate}
 
-\subsection{Especificação de Requisitos}
+\subsubsection{Software}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Edição de Vídeo:} Software de edição não-linear com suporte a mínimo de 16 camadas simultâneas, compatível com formatos 4K e 8K.
+    \item \textbf{Efeitos Visuais:} Plataforma de composição visual com capacidade de renderização de efeitos complexos em tempo real, suportando simulações físicas avançadas.
+    \item \textbf{Correção de Cor:} Ferramentas de correção de cor com suporte a espaços de cor profissionais (DCI-P3, Adobe RGB), com controles de curva de cor e níveis de precisão.
+    \item \textbf{Animação 3D:} Ambiente de modelagem e animação 3D com suporte a rigging avançado, simulação de física e renderização em tempo real.
+    \item \textbf{Motion Graphics:} Ferramentas para criação de gráficos em movimento com capacidade de animação paramétrica e geração procedural.
+    \item \textbf{Mixagem de Áudio:} Software de edição de áudio com suporte a múltiplas camadas, processadores de efeitos em tempo real e compatibilidade com formatos profissionais.
+    \item \textbf{Rastreamento de Movimento:} Módulo de tracking com precisão subpixel, capaz de rastrear múltiplos pontos simultaneamente em resoluções 4K.
+    \item \textbf{Rotoscopia:} Ferramentas avançadas de máscaras e rotoscopia com inteligência artificial para extração precisa de elementos.
+\end{enumerate}
 
-\begin{enumerate}
-    \item Captura de Movimento: O sistema será compatível com o hardware de captura de movimento Vicon Vantage, incluindo câmeras e marcadores.
-    \item Importação de Dados de Movimento: O software permitirá a importação direta de dados de movimento capturados no formato C3D.
-    \item Visualização em Tempo Real: O sistema suportará a visualização em tempo real de dados de captura de movimento em um ambiente 3D.
-    \item Keying Chroma: O software incluirá um keyer chroma avançado capaz de lidar com reflexos verdes e derramamento de cor.
-    \item Tracking Planar: Será fornecida uma ferramenta de tracking planar que pode lidar com oclusões parciais.
-    \item Composição em Camadas: O sistema suportará composição em camadas ilimitadas com modos de mesclagem padrão da indústria.
-    \item Versionamento de Assets: O sistema manterá um histórico completo de versões para cada asset, permitindo reverter para qualquer ponto no tempo.
-    \item Comparação Visual: Será fornecida uma ferramenta de comparação visual para diferentes versões de assets de imagem e vídeo.
-    \item Branching de Projetos: O sistema suportará branching de projetos, permitindo experimentações paralelas sem afetar a linha principal de produção.
-    \item Aplicativo Móvel: Será desenvolvido um aplicativo móvel dedicado para iOS e Android para visualização segura de conteúdo de produção.
-    \item Streaming Adaptativo: O sistema suportará streaming adaptativo, ajustando a qualidade do vídeo com base na velocidade da conexão de rede.
-    \item Anotações Móveis: Ferramentas de anotação touch-friendly serão fornecidas para feedback rápido em dispositivos móveis.
-    \item Renderização em Nuvem: O sistema será capaz de distribuir automaticamente tarefas de renderização para instâncias na AWS EC2.
-    \item Estimativa de Custos: Será fornecida uma ferramenta de estimativa de custos em tempo real para renderização em nuvem.
-    \item Renderização Híbrida: O sistema suportará renderização híbrida, combinando recursos locais e de nuvem para otimização de custos.
-    \item Edição de Roteiros: O sistema incluirá um editor WYSIWYG com suporte a formatação de roteiro padrão da indústria.
-    \item Análise de Roteiro: Serão fornecidas ferramentas de análise de roteiro para extração automática de requisitos de VFX.
-    \item Planejamento Ágil: O sistema incluirá um planejador de sprints integrado ao pipeline de VFX.
-    \item Backlog Visual: Serão implementadas ferramentas para criação e gestão de backlogs de produto visual.
-    \item Dashboards Ágeis: Serão criados dashboards ágeis customizados para diferentes papéis em uma equipe de VFX.
+\subsubsection{Banco de Dados}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Gerenciamento de Metadados:} Sistema de banco de dados relacional capaz de armazenar e indexar metadados de projetos com alta performance e baixa latência.
+    \item \textbf{Controle de Versões:} Mecanismo de versionamento de arquivos com rastreamento completo de alterações, suportando reversão e comparação de versões.
+    \item \textbf{Registro de Histórico:} Sistema de log detalhado que registra todas as modificações em arquivos, incluindo autor, timestamp e natureza da alteração.
+    \item \textbf{Catalogação de Assets:} Biblioteca digital com sistema de classificação avançado, permitindo organização hierárquica e marcação semântica de assets.
+    \item \textbf{Busca Avançada:} Motor de busca com suporte a pesquisas por palavras-chave, metadados, tags e conteúdo, com filtros complexos e relevância.
+    \item \textbf{Configurações de Renderização:} Repositório centralizado para armazenamento e recuperação de configurações de renderização, permitindo replicação e padronização.
+    \item \textbf{Monitoramento de Licenças:} Sistema de rastreamento e gerenciamento de licenças de software, com alertas de expiração e relatórios de utilização.
+    \item \textbf{Gestão de Direitos Autorais:} Repositório seguro para informações de propriedade intelectual, com controles de acesso e rastreabilidade.
+\end{enumerate}
+
+\subsubsection{Pessoas}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Gerenciamento de Usuários:} Sistema de autenticação multinível com perfis granulares, suportando autenticação de dois fatores e integração com diretórios corporativos.
+    \item \textbf{Distribuição de Tarefas:} Plataforma de gerenciamento de projetos com atribuição dinâmica de tarefas, considerando habilidades e carga de trabalho.
+    \item \textbf{Monitoramento de Progresso:} Painel de acompanhamento em tempo real com métricas individuais e comparativas de desempenho.
+    \item \textbf{Comunicação Interna:} Sistema de comunicação integrado com chat, videoconferência e quadros colaborativos.
+    \item \textbf{Avaliação de Desempenho:} Módulo de avaliação com métricas objetivas, feedback 360 graus e geração automática de relatórios.
+    \item \textbf{Gestão de Agenda:} Calendário corporativo com agendamento inteligente de reuniões, considerando disponibilidade e fuso horário.
+    \item \textbf{Registro de Horas:} Sistema de timesheet com registro preciso de horas trabalhadas, integração com folha de pagamento e projetos.
+    \item \textbf{Administração de Pessoal:} Módulo de RH para gestão de férias, licenças, treinamentos e desenvolvimento profissional.
+\end{enumerate}
+
+\subsubsection{Mobilidade}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Acesso Remoto de Projetos:} Aplicação mobile com sincronização segura e acesso completo a projetos em andamento.
+    \item \textbf{Visualização de Rushes:} Visualizador de mídia móvel com suporte a pré-visualização em alta qualidade e anotações.
+    \item \textbf{Aprovação de Conteúdo:} Interface móvel para revisão e aprovação rápida de conteúdo, com sistema de comentários e marcações.
+    \item \textbf{Registro de Campo:} Aplicativo para captura de notas, ideias e anotações com geolocalização e anexo de mídias.
+    \item \textbf{Upload de Footage:} Ferramenta de upload direto de mídia com otimização de transferência e metadados automáticos.
+    \item \textbf{Sincronização Multi-dispositivo:} Sistema de sincronização em nuvem com sincronização instantânea e resolução de conflitos.
+    \item \textbf{Controle Remoto de Renderização:} Módulo para iniciar, monitorar e gerenciar processos de renderização remotamente.
+    \item \textbf{Edição de Storyboard:} Aplicativo para criação e edição de storyboards em dispositivos touch com ferramentas intuitivas.
+\end{enumerate}
+
+\subsubsection{Documentos}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Edição Colaborativa de Roteiros:} Plataforma de escrita colaborativa em tempo real, com controle de versões e comentários.
+    \item \textbf{Relatórios Automáticos:} Sistema de geração de relatórios de progresso com métricas personalizáveis e visualizações dinâmicas.
+    \item \textbf{Elaboração de Ordens do Dia:} Ferramenta para criação de agendas detalhadas com recursos de template e personalização.
+    \item \textbf{Gestão de Equipamentos:} Lista dinâmica de equipamentos com rastreamento de status, manutenção e disponibilidade.
+    \item \textbf{Geração de Contratos:} Sistema de criação de contratos com templates personalizáveis e assinatura digital.
+    \item \textbf{Orçamentação Detalhada:} Módulo de orçamento com categorização avançada, previsão de custos e análise comparativa.
+    \item \textbf{Cronogramas Interativos:} Ferramenta de planejamento de projeto com visualização Gantt e dependências dinâmicas.
+    \item \textbf{Folhas de Continuidade:} Gerador de documentos de continuidade com rastreamento detalhado de cenas e elementos.
+\end{enumerate}
+
+\subsubsection{Metodologia}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Metodologias Ágeis:} Implementação de framework Scrum e Kanban com personalização para fluxos específicos de produção multimídia.
+    \item \textbf{Gestão de Sprints:} Ferramenta para definição, acompanhamento e avaliação de sprints com métricas de produtividade.
+    \item \textbf{Reuniões Virtuais:} Plataforma de conferência integrada com ferramentas de colaboração e quadro branco digital.
+    \item \textbf{Gestão de Backlog:} Sistema de priorização e gerenciamento de backlog de produto com análise de complexidade.
+    \item \textbf{Retrospectivas Estruturadas:} Módulo para condução de retrospectivas com templates personalizáveis e análise de feedback.
+    \item \textbf{Monitoramento de KPIs:} Painel de indicadores-chave de desempenho com visualizações em tempo real e alertas.
+    \item \textbf{Personalização de Workflow:} Ferramenta de modelagem de processos com suporte a fluxos específicos de diferentes tipos de projeto.
+    \item \textbf{Processos de Aprovação:} Sistema de aprovação com múltiplas etapas, notificações e rastreamento de decisões.
+\end{enumerate}
+
+\subsubsection{Nuvem}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Armazenamento de Projetos:} Infraestrutura de nuvem com armazenamento seguro, escalável e de alta disponibilidade para projetos multimídia.
+    \item \textbf{Renderização Distribuída:} Plataforma de computação em nuvem para processamento paralelo de renderizações complexas.
+    \item \textbf{Compartilhamento Seguro:} Sistema de compartilhamento de arquivos com criptografia, controle de acesso e rastreabilidade.
+    \item \textbf{Colaboração em Tempo Real:} Ambiente de trabalho colaborativo com sincronização instantânea e edição simultânea.
+    \item \textbf{Backup Automático:} Sistema de backup contínuo com múltiplas versões e recuperação instantânea.
+    \item \textbf{Escalabilidade Dinâmica:} Infraestrutura com provisionamento automático de recursos baseado em demanda.
+    \item \textbf{Streaming de Conteúdo:} Plataforma de streaming com suporte a conteúdo em alta resolução e baixa latência.
+    \item \textbf{Sincronização Multi-dispositivo:} Mecanismo de sincronização automática e bidirecional entre dispositivos.
+\end{enumerate}
+
+\subsubsection{Servidor}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Gerenciamento de Usuários:} Sistema centralizado de autenticação e autorização com integração de diretórios corporativos.
+    \item \textbf{Balanceamento de Carga:} Infraestrutura de balanceamento dinâmico com algoritmos inteligentes de distribuição de recursos.
+    \item \textbf{Monitoramento de Recursos:} Painel de monitoramento em tempo real com métricas detalhadas de desempenho e utilização.
+    \item \textbf{Segurança Robusta:} Implementação de políticas de segurança multicamadas, incluindo firewall, IDS e criptografia.
+    \item \textbf{Backup Automatizado:} Sistema de backup configurável com replicação, recuperação point-in-time e teste automático.
+    \item \textbf{Proteção contra Intrusões:} Firewall avançado com detecção de anomalias e prevenção de intrusões em tempo real.
+    \item \textbf{Atualização Sem Interrupção:} Mecanismo de atualização de sistemas com zero downtime e rollback automático.
+    \item \textbf{Virtualização de Servidores:} Infraestrutura de virtualização para otimização de recursos e alta disponibilidade.
+\end{enumerate}
+
+\subsection{Especificações de Requisitos}
+
+\subsubsection{Hardware}
+\textbf{Requisito 1: Capturar e processar imagens em alta definição através de câmeras virtuais.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir resolução máxima:} Compatível com 8K UHD
+    \item \textbf{Especificar taxa de quadros:} Suporte a 60 fps em tempo real
+    \item \textbf{Configurar formatos de captura:} RAW, ProRes, H.265
+    \item \textbf{Estabelecer processamento simultâneo:} Capacidade de captura em múltiplos ângulos
+    \item \textbf{Definir integração com software:} Compatibilidade com motores de renderização em tempo real
+\end{enumerate}
+
+\textbf{Requisito 2: Renderizar cenários virtuais em telas LED de alta resolução.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Especificar resolução de saída:} Suporte a 4K e 8K
+    \item \textbf{Configurar taxa de atualização:} Compatibilidade com 120 Hz
+    \item \textbf{Estabelecer sincronização de LED:} Controle preciso de sincronização de quadros
+    \item \textbf{Definir suporte a HDR:} Compatível com HDR10 e Dolby Vision
+    \item \textbf{Configurar integração de múltiplos painéis:} Gerenciamento de painéis LED em tempo real
+\end{enumerate}
+
+\textbf{Requisito 3: Registrar e processar dados de captura de movimento em tempo real.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Especificar taxa de amostragem:} Captura mínima de 240 fps
+    \item \textbf{Configurar sensores suportados:} Compatibilidade com sensores ópticos e inerciais
+    \item \textbf{Definir precisão de captura:} Acurácia submilimétrica
+    \item \textbf{Estabelecer processamento em tempo real:} Latência inferior a 10 ms
+    \item \textbf{Configurar integração com software de animação:} Suporte a exportação de dados para Maya e Blender
+\end{enumerate}
+
+\subsubsection{Software}
+\textbf{Requisito 1: Realizar edição não-linear de vídeo com múltiplas camadas.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir número de camadas:} Suporte mínimo a 16 camadas simultâneas
+    \item \textbf{Especificar resolução de edição:} Compatível com 4K e 8K
+    \item \textbf{Configurar formatos suportados:} ProRes, DNxHR, RAW, H.265
+    \item \textbf{Estabelecer velocidade de renderização:} Tempo real para resoluções 4K
+    \item \textbf{Definir compatibilidade de plugins:} Suporte a plugins de terceiros
+\end{enumerate}
+
+\textbf{Requisito 2: Compor e manipular efeitos visuais complexos.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Especificar simulações físicas:} Suporte a dinâmica de partículas e fluidos
+    \item \textbf{Definir renderização em tempo real:} Capacidade de preview instantâneo
+    \item \textbf{Configurar biblioteca de efeitos:} Mínimo 500 efeitos pré-configurados
+    \item \textbf{Estabelecer integração de IA:} Assistente de composição automática
+    \item \textbf{Definir compatibilidade de GPU:} Suporte a múltiplas GPUs em paralelo
+\end{enumerate}
+
+\textbf{Requisito 3: Executar correção de cor avançada com controle preciso.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir espaços de cor:} Suporte a DCI-P3, Adobe RGB, Rec. 2020
+    \item \textbf{Especificar precisão de ajustes:} Correções em níveis de 32-bit float
+    \item \textbf{Configurar curvas de correção:} Suporte a curvas de CIE, Cineon
+    \item \textbf{Estabelecer ferramentas de máscara:} Seleção precisa por cor e luminância
+    \item \textbf{Definir histórico de ajustes:} Rastreamento completo de modificações
+\end{enumerate}
+
+\subsubsection{Banco de Dados}
+\textbf{Requisito 1: Armazenar e gerenciar metadados de projetos.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir estrutura de metadados:} Suporte a campos personalizados
+    \item \textbf{Configurar escalabilidade:} Capacidade de expansão para grandes volumes
+    \item \textbf{Estabelecer integridade de dados:} Controle de validação automatizada
+    \item \textbf{Definir backup automatizado:} Rotinas diárias de backup
+    \item \textbf{Configurar acesso controlado:} Permissões baseadas em roles
+\end{enumerate}
+
+\textbf{Requisito 2: Controlar versões de arquivos de projeto.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir versionamento automático:} Suporte a controle de versões incremental
+    \item \textbf{Configurar recuperação de versões:} Restauração de qualquer versão anterior
+    \item \textbf{Estabelecer sistema de comparação:} Comparação visual entre versões
+    \item \textbf{Definir armazenamento otimizado:} Compactação de versões arquivadas
+    \item \textbf{Configurar logs de alteração:} Registro completo de modificações
+\end{enumerate}
+
+\textbf{Requisito 3: Registrar histórico de alterações em arquivos.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir rastreamento de alterações:} Log detalhado de edições
+    \item \textbf{Configurar notificação de alterações:} Alertas para mudanças críticas
+    \item \textbf{Estabelecer auditoria de segurança:} Registro de acessos e modificações
+    \item \textbf{Definir visualização de histórico:} Interface gráfica para navegação entre alterações
+    \item \textbf{Configurar exportação de logs:} Exportação para formatos CSV e PDF
+\end{enumerate}
+
+\subsubsection{Pessoas}
+\textbf{Requisito 1: Gerenciar perfis de usuário com níveis de acesso.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir níveis de permissão:} Acesso personalizado por funções
+    \item \textbf{Configurar autenticação segura:} Suporte a autenticação multifator
+    \item \textbf{Estabelecer controle de acesso:} Gerenciamento granular de permissões
+    \item \textbf{Definir logs de atividade:} Registro detalhado de ações do usuário
+    \item \textbf{Configurar recuperação de conta:} Procedimentos automatizados de recuperação
+\end{enumerate}
+
+\textbf{Requisito 2: Distribuir e atribuir tarefas à equipe.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir sistema de atribuição:} Interface de arrastar e soltar
+    \item \textbf{Configurar notificações de tarefas:} Alertas automáticos por e-mail e aplicativo
+    \item \textbf{Estabelecer prioridade de tarefas:} Classificação por urgência e importância
+    \item \textbf{Definir integração com calendário:} Sincronização de prazos com calendários
+    \item \textbf{Configurar relatórios de desempenho:} Análise de produtividade individual e coletiva
+\end{enumerate}
+
+\textbf{Requisito 3: Monitorar progresso de tarefas individuais.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir rastreamento visual:} Painel de progresso em tempo real
+    \item \textbf{Configurar atualizações automáticas:} Status de tarefas sincronizado com ações
+    \item \textbf{Estabelecer histórico de progresso:} Registro de etapas concluídas
+    \item \textbf{Definir relatórios personalizados:} Geração de relatórios de progresso
+    \item \textbf{Configurar alertas de atraso:} Notificações de prazos não cumpridos
+\end{enumerate}
+
+\subsubsection{Mobilidade}
+\textbf{Requisito 1: Acessar e gerenciar projetos remotamente.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir acesso remoto seguro:} Conexão criptografada SSL
+    \item \textbf{Configurar sincronização em nuvem:} Atualizações automáticas entre dispositivos
+    \item \textbf{Estabelecer controle de versão:} Gerenciamento remoto de versões
+    \item \textbf{Definir suporte offline:} Acesso a dados sem conexão
+    \item \textbf{Configurar notificações móveis:} Alertas em tempo real sobre mudanças em projetos
+\end{enumerate}
+
+\textbf{Requisito 2: Visualizar rushes em dispositivos móveis.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir formatos compatíveis:} Suporte a MP4, MOV, ProRes
+    \item \textbf{Configurar streaming de vídeo:} Reprodução em alta qualidade com baixa latência
+    \item \textbf{Estabelecer controles de reprodução:} Ferramentas de navegação e marcação
+    \item \textbf{Definir suporte a anotações:} Adição de comentários em tempo real
+    \item \textbf{Configurar cache local:} Pré-carregamento de rushes
+\end{enumerate}
+
+\textbf{Requisito 3: Aprovar conteúdo via aplicativo móvel.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir fluxo de aprovação:} Interface simplificada para aprovações
+    \item \textbf{Configurar notificações de aprovação:} Alertas para revisões pendentes
+    \item \textbf{Estabelecer assinatura digital:} Aprovação com autenticação biométrica
+    \item \textbf{Definir histórico de aprovações:} Registro detalhado de decisões
+    \item \textbf{Configurar integração com desktop:} Sincronização instantânea com a versão principal
+\end{enumerate}
+
+\subsubsection{Documentos}
+\textbf{Requisito 1: Criar e editar roteiros colaborativamente.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir edição em tempo real:} Suporte a múltiplos colaboradores simultâneos
+    \item \textbf{Configurar controle de versões:} Histórico detalhado de edições
+    \item \textbf{Estabelecer comentários e revisões:} Ferramentas de feedback integrado
+    \item \textbf{Definir exportação de roteiros:} Suporte a formatos PDF e DOCX
+    \item \textbf{Configurar permissões de edição:} Níveis diferenciados de acesso
+\end{enumerate}
+
+\textbf{Requisito 2: Gerar relatórios de progresso automaticamente.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir modelos de relatório:} Templates personalizáveis
+    \item \textbf{Configurar agendamento de relatórios:} Geração periódica automática
+    \item \textbf{Estabelecer métricas de progresso:} Indicadores de desempenho chave (KPIs)
+    \item \textbf{Definir integração com tarefas:} Dados sincronizados com o sistema de gestão
+    \item \textbf{Configurar exportação de relatórios:} Suporte a PDF, CSV e Excel
+\end{enumerate}
+
+\textbf{Requisito 3: Elaborar ordens do dia detalhadas.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir criação automatizada:} Geração com base nas tarefas agendadas
+    \item \textbf{Configurar notificações:} Envio automático para participantes
+    \item \textbf{Estabelecer integração com calendário:} Sincronização de ordens com eventos
+    \item \textbf{Definir personalização:} Templates ajustáveis para diferentes reuniões
+    \item \textbf{Configurar histórico de ordens:} Armazenamento de registros anteriores
+\end{enumerate}
+
+\subsubsection{Metodologia}
+\textbf{Requisito 1: Implementar metodologias ágeis de gestão.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir framework ágil:} Suporte a Scrum, Kanban e Lean
+    \item \textbf{Configurar ferramentas de planejamento:} Criação e acompanhamento de tarefas
+    \item \textbf{Estabelecer ciclos de iteração:} Definição de prazos e entregas incrementais
+    \item \textbf{Definir métricas de desempenho:} Monitoramento de velocidade e progresso
+    \item \textbf{Configurar retrospectivas automáticas:} Registro e análise de feedback ao final de cada sprint
+\end{enumerate}
+
+\textbf{Requisito 2: Definir e gerenciar sprints de projeto.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir duração dos sprints:} Personalização do ciclo de iteração
+    \item \textbf{Configurar backlog de tarefas:} Organização e priorização de atividades
+    \item \textbf{Estabelecer quadros de progresso:} Visualização de tarefas em andamento
+    \item \textbf{Definir relatórios de sprint:} Geração automática de status de conclusão
+    \item \textbf{Configurar alertas de marcos:} Notificações de etapas importantes
+\end{enumerate}
+
+\textbf{Requisito 3: Conduzir reuniões diárias virtuais.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir agenda padrão:} Estrutura de tópicos a serem abordados
+    \item \textbf{Configurar integração com calendário:} Agendamento automático das reuniões
+    \item \textbf{Estabelecer ferramentas de videoconferência:} Compatibilidade com Zoom e Microsoft Teams
+    \item \textbf{Definir registro de atas:} Armazenamento e compartilhamento das discussões
+    \item \textbf{Configurar lembretes automáticos:} Notificações antes do início da reunião
+\end{enumerate}
+
+\subsubsection{Nuvem}
+\textbf{Requisito 1: Armazenar e gerenciar projetos na nuvem.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir espaço de armazenamento:} Capacidade mínima de 1 TB por projeto
+    \item \textbf{Configurar controle de versões:} Histórico completo de revisões de arquivos
+    \item \textbf{Estabelecer acesso remoto:} Conexão segura com criptografia SSL/TLS
+    \item \textbf{Definir backups automáticos:} Cópias de segurança diárias
+    \item \textbf{Configurar permissões granulares:} Acesso controlado por usuário e grupo
+\end{enumerate}
+
+\textbf{Requisito 2: Executar renderização distribuída de projetos complexos.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir arquitetura de renderização:} Suporte a render farms escaláveis
+    \item \textbf{Configurar balanceamento de carga:} Distribuição automática de tarefas entre servidores
+    \item \textbf{Estabelecer monitoramento de desempenho:} Análise em tempo real do progresso da renderização
+    \item \textbf{Definir suporte a múltiplos formatos:} Compatibilidade com ProRes, H.265, e RAW
+    \item \textbf{Configurar relatórios de renderização:} Geração automática de logs de desempenho
+\end{enumerate}
+
+\textbf{Requisito 3: Compartilhar arquivos com segurança via nuvem.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir sistema de permissões:} Controle de acesso baseado em função
+    \item \textbf{Configurar criptografia de arquivos:} Criptografia AES-256 durante a transmissão e armazenamento
+    \item \textbf{Estabelecer links de compartilhamento temporários:} Validade configurável para segurança
+    \item \textbf{Definir rastreamento de acessos:} Registro detalhado de downloads e visualizações
+    \item \textbf{Configurar integração com ferramentas externas:} Compatibilidade com Google Drive e Dropbox
+\end{enumerate}
+
+\subsubsection{Servidor}
+\textbf{Requisito 1: Centralizar gerenciamento de usuários e permissões.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir diretório de usuários:} Integração com LDAP e Active Directory
+    \item \textbf{Configurar níveis de permissão:} Acesso personalizado por usuário ou grupo
+    \item \textbf{Estabelecer autenticação centralizada:} Single Sign-On (SSO)
+    \item \textbf{Definir logs de atividades:} Registro detalhado de ações no sistema
+    \item \textbf{Configurar backup de dados de usuário:} Cópias de segurança automáticas
+\end{enumerate}
+
+\textbf{Requisito 2: Balancear carga entre servidores automaticamente.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir algoritmo de balanceamento:} Round-robin, Least Connections e IP Hash
+    \item \textbf{Configurar monitoramento de carga:} Análise contínua de desempenho
+    \item \textbf{Estabelecer escalabilidade dinâmica:} Adição automática de recursos conforme necessidade
+    \item \textbf{Definir redundância:} Suporte a failover automático
+    \item \textbf{Configurar relatórios de desempenho:} Geração periódica de análises
+\end{enumerate}
+
+\textbf{Requisito 3: Monitorar utilização de recursos em tempo real.}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Definir painel de monitoramento:} Visualização centralizada de CPU, memória e rede
+    \item \textbf{Configurar alertas de uso excessivo:} Notificações automáticas em caso de sobrecarga
+    \item \textbf{Estabelecer logs de desempenho:} Registro contínuo de métricas
+    \item \textbf{Definir integração com ferramentas de análise:} Compatibilidade com Grafana e Prometheus
+    \item \textbf{Configurar geração de relatórios:} Relatórios automáticos de uso de recursos
 \end{enumerate}
 
 \section{Stakeholders}
@@ -691,7 +975,7 @@ Nesta seção, são apresentados os principais casos de uso do sistema de estúd
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{Clientes}
+    \includegraphics[width=0.8\textwidth]{Gerenciar}
     \caption{Diagrama de Interação Cliente/Gerente Sistema}
     \label{fig:diagram1}
 \end{figure}
