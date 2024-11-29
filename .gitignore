@@ -35,3 +35,6 @@ result
 
 # Env files
 .env
+
+# All windows files
+*.exe
