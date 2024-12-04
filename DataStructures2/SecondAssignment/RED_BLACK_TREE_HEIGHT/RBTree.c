@@ -51,7 +51,7 @@ int getRBTHeight(RBTNode* node) {
 RBTNode* insertRBT(RBTNode* h, int value) {
   if (h == NULL) return createRBTNode(value);
 
-  printf("passou aqui \n");
+  // printf("dentro do insert recursivo \n");
   if (value < h->data)
     h->left = insertRBT(h->left, value);
   else if (value > h->data)
