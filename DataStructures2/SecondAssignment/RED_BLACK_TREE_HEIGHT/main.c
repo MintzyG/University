@@ -5,23 +5,30 @@
 #include "./include.h"
 
 int main() {
-    srand(time(NULL));
-    RBTNode* rootRBT = NULL;
-    
-    #ifdef RAND
-    for (int i = 0; i < NUM_ELEMENTS; i++)
-        rootRBT = insertRBT(rootRBT, rand() % ELEMENT_RANGE);
+  srand(time(NULL));
+  RBTNode* rootRBT = NULL;
 
-    int height = getRBTHeight(rootRBT);
-    printf("Altura da Arvore Rubro-Negra: %d\n\n", height);
-    #else
-    for (int i = 0; i < 12; i++)
-        rootRBT = insertRBT(rootRBT, rand() % 100);
+#ifdef RAND
+  for (int i = 0; i < NUM_ELEMENTS; i++)
+    rootRBT = insertRBT(rootRBT, rand() % ELEMENT_RANGE);
 
-    int height = getRBTHeight(rootRBT);
-    printf("Altura da arvore Rubro-Negra: %d\n\n", height);
-    printTreeRBT(rootRBT, 1);
-    #endif
-    
-    return 0;
+  int height = getRBTHeight(rootRBT);
+  printf("Altura da Arvore Rubro-Negra: %d\n\n", height);
+#else
+  int values[] = {10, 20, 5, 15, 30, 3, 7, 24, 35, 10, 9, 22};
+  for (int i = 0; i < 12; i++) {
+    rootRBT = insertRBT(rootRBT, values[i]);
+    rootRBT->color = BLACK;
+    printTreeRBT(rootRBT, 0);
+    printf("###################################\n");
+    // rootRBT = insertRBT(rootRBT, rand() % 100);
+  }
+  int height = getRBTHeight(rootRBT);
+  printf("Altura da arvore Rubro-Negra: %d\n\n", height);
+  printTreeRBT(rootRBT, 0);
+  printf("###################################\n");
+
+#endif
+
+  return 0;
 }
